@@ -1,0 +1,31 @@
+{
+  "facts": {
+    "blank_pages": [],
+    "citation_keys": 49,
+    "defined_bib_keys": 48,
+    "font_rows": 18,
+    "material_overfull_boxes": 0,
+    "outside_blocks": 0,
+    "overfull box": 0,
+    "page_sizes": [
+      [
+        486.0,
+        720.0
+      ]
+    ],
+    "pages": 50,
+    "pdffonts_rc": 0,
+    "python_files": 20,
+    "strict_certificate_json": 0,
+    "structural_audit": "PASS",
+    "undefined LaTeX reference": 0,
+    "undefined citation": 0,
+    "undefined references": 0
+  },
+  "issues": [
+    "missing bibliography keys: ['acmnumeric']",
+    "paper lacks expected claim-boundary phrase local temporar"
+  ],
+  "status": "FAIL",
+  "warnings": []
+}

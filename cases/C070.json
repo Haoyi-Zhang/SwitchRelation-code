@@ -1,0 +1,56 @@
+{
+  "id": "C070",
+  "family": "move_direction_disjoint",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0,
+      0,
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "memmove",
+      "src": "a",
+      "so": 0,
+      "dst": "a",
+      "do": 2,
+      "n": 2
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 2,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "move_forward",
+      "src": "a",
+      "so": 0,
+      "dst": "a",
+      "do": 2,
+      "n": 2
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 2,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

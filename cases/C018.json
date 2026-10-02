@@ -1,0 +1,69 @@
+{
+  "id": "C018",
+  "family": "symbolic_offset",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      "@y",
+      0,
+      17
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": "$n",
+      "value": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": "$n",
+      "value": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

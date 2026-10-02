@@ -1,0 +1,110 @@
+{
+  "checked": [
+    {
+      "actual_line": 121,
+      "claim": "Allocation relation",
+      "file": "src/contextual.py",
+      "match": true,
+      "recorded_line": 121,
+      "symbol": "allocation_equivalent"
+    },
+    {
+      "actual_line": 152,
+      "claim": "State-dependent short separator",
+      "file": "src/contextual.py",
+      "match": true,
+      "recorded_line": 152,
+      "symbol": "distinguishing_continuation"
+    },
+    {
+      "actual_line": 211,
+      "claim": "Fixed complete basis",
+      "file": "src/contextual.py",
+      "match": true,
+      "recorded_line": 211,
+      "symbol": "fixed_complete_basis"
+    },
+    {
+      "actual_line": 244,
+      "claim": "Probe terminal observation",
+      "file": "src/contextual.py",
+      "match": true,
+      "recorded_line": 244,
+      "symbol": "run_basis_continuation"
+    },
+    {
+      "actual_line": 91,
+      "claim": "General concrete execution",
+      "file": "src/replay.py",
+      "match": true,
+      "recorded_line": 91,
+      "symbol": "interpret"
+    },
+    {
+      "actual_line": 53,
+      "claim": "Region feasibility",
+      "file": "src/branch_replay.py",
+      "match": true,
+      "recorded_line": 53,
+      "symbol": "region"
+    },
+    {
+      "actual_line": 49,
+      "claim": "Least regional model",
+      "file": "src/branch_replay.py",
+      "match": true,
+      "recorded_line": 49,
+      "symbol": "Region.minimum"
+    },
+    {
+      "actual_line": 297,
+      "claim": "Certificate coverage and replay",
+      "file": "src/branch_replay.py",
+      "match": true,
+      "recorded_line": 297,
+      "symbol": "check"
+    },
+    {
+      "actual_line": 245,
+      "claim": "Certificate JSON loading",
+      "file": "src/replay.py",
+      "match": true,
+      "recorded_line": 245,
+      "symbol": "load"
+    },
+    {
+      "actual_line": 50,
+      "claim": "Corpus strict parsing",
+      "file": "src/strict_json.py",
+      "match": true,
+      "recorded_line": 50,
+      "symbol": "load_strict"
+    },
+    {
+      "actual_line": 75,
+      "claim": "Full-abstraction finite audit",
+      "file": "src/check_full_abstraction.py",
+      "match": true,
+      "recorded_line": 75,
+      "symbol": "run"
+    },
+    {
+      "actual_line": 95,
+      "claim": "Isolated input integrity",
+      "file": "reproduce.py",
+      "match": true,
+      "recorded_line": 95,
+      "symbol": "tree_digest"
+    },
+    {
+      "actual_line": 111,
+      "claim": "External campaign output",
+      "file": "reproduce.py",
+      "match": true,
+      "recorded_line": 111,
+      "symbol": "require_external_output"
+    }
+  ],
+  "rows": 13,
+  "status": "pass"
+}

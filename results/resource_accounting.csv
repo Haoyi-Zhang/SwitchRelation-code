@@ -1,0 +1,12 @@
+phase,concrete_state_evaluations,producer_solver_calls,replayer_solver_calls,other_checker_or_mutation_obligations,counted_obligations,cpu_seconds,evidence_note
+inherited_reclassified_campaign,92810,13554,7888,27274,48716,9.365998004,primitive direct states are separate; canonical rows and domain calls retained
+continuation_smoke_C001_C135_C166,0,5364,5364,0,10728,14.18,measured continuation checkpoint; certificates were scratch only
+final_case_regeneration,0,0,0,167,167,,deterministic generator-to-materialization comparisons
+final_full_abstraction_witness_audit,222,0,0,1299,1299,,one checker obligation per ordered state pair
+final_region_crosscheck,11292,384,384,384,1152,,brute-force oracle plus two separately written solvers
+final_primitive_oracle,65536,0,0,0,0,0.923712506,direct exhaustive semantic loop; not solver/mutation/checker obligations
+final_branch_certificates_C001_C166,0,11267,11267,332,22866,18.258325,all completed certificates retained and replayed by the separately structured checker
+final_mutation_and_parser_suite,0,0,85,18,103,,each malformed proof/input must fail closed
+final_C167_default_cap_attempt,0,6055,0,1,6056,1.720833118,unknown_resource_exhaustion
+final_continuation_audit,480697,320,6319,1969,8608,12.685252806,"fresh C001-C165 replay, fresh regional crosscheck, case/state/mutation checks; C166 full replay retained and every stored leaf minimum concretely rechecked"
+final_clean_extract_stratified_replay,0,0,299,5,304,0.310110881,"predeclared clean-extract replay of C061, C062, C065, C162, C163; no certificate regeneration"

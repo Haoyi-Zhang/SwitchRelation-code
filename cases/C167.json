@@ -1,0 +1,1319 @@
+{
+  "id": "C167",
+  "family": "comparison_fanout",
+  "variables": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7",
+    "v8",
+    "v9",
+    "v10",
+    "v11",
+    "v12",
+    "v13",
+    "v14",
+    "v15",
+    "v16",
+    "v17",
+    "v18",
+    "v19",
+    "v20",
+    "v21",
+    "v22",
+    "v23",
+    "v24",
+    "v25",
+    "v26",
+    "v27",
+    "v28",
+    "v29",
+    "v30",
+    "v31"
+  ],
+  "buffers": {
+    "a": [
+      "@v0",
+      "@v1",
+      "@v2",
+      "@v3",
+      "@v4",
+      "@v5",
+      "@v6",
+      "@v7",
+      "@v8",
+      "@v9",
+      "@v10",
+      "@v11",
+      "@v12",
+      "@v13",
+      "@v14",
+      "@v15",
+      "@v16",
+      "@v17",
+      "@v18",
+      "@v19",
+      "@v20",
+      "@v21",
+      "@v22",
+      "@v23",
+      "@v24",
+      "@v25",
+      "@v26",
+      "@v27",
+      "@v28",
+      "@v29",
+      "@v30",
+      "@v31"
+    ]
+  },
+  "reference": [
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          2
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          2
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          3
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          3
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          4
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          4
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          5
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          5
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          6
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          6
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          7
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          7
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          8
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          8
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          9
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          9
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          10
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          10
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          11
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          11
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          12
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          12
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          13
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          13
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          14
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          14
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          15
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          15
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          16
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          16
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          17
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          17
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          18
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          18
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          19
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          19
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          20
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          20
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          21
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          21
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          22
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          22
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          23
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          23
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          24
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          24
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          25
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          25
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          26
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          26
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          27
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          27
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          28
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          28
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          29
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          29
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          30
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          30
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          31
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          2
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          2
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          3
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          3
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          4
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          4
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          5
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          5
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          6
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          6
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          7
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          7
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          8
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          8
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          9
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          9
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          10
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          10
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          11
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          11
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          12
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          12
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          13
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          13
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          14
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          14
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          15
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          15
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          16
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          16
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          17
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          17
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          18
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          18
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          19
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          19
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          20
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          20
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          21
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          21
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          22
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          22
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          23
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          23
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          24
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          24
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          25
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          25
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          26
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          26
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          27
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          27
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          28
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          28
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          29
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          29
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          30
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          30
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          31
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "emit",
+      "value": "$g"
+    }
+  ],
+  "expected": "equivalent"
+}

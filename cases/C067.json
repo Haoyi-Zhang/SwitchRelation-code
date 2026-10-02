@@ -1,0 +1,57 @@
+{
+  "id": "C067",
+  "family": "omit_copy_terminator",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0
+    ],
+    "b": [
+      1,
+      1,
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strcpy",
+      "dst": "b",
+      "do": 0,
+      "src": "a",
+      "so": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "b",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "copy_no_zero",
+      "dst": "b",
+      "do": 0,
+      "src": "a",
+      "so": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "b",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "different"
+}

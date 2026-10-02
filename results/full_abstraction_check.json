@@ -1,0 +1,15 @@
+{
+  "differing_pairs": 1262,
+  "equivalent_pairs": 37,
+  "finite_basis_executions": 222,
+  "pair_obligations": 1299,
+  "scope": "bounded executable audit; general theorem is proved on paper",
+  "state_count": 36,
+  "status": "pass",
+  "witness_lengths": {
+    "maximum": 2,
+    "one": 324,
+    "two": 290,
+    "zero": 648
+  }
+}

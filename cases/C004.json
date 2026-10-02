@@ -1,0 +1,57 @@
+{
+  "id": "C004",
+  "family": "unsigned_compare",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0,
+      17
+    ],
+    "b": [
+      "@y",
+      0,
+      17
+    ]
+  },
+  "reference": [
+    {
+      "op": "strcmp",
+      "a": "a",
+      "ao": 0,
+      "b": "b",
+      "bo": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "switch",
+      "buf": "b"
+    },
+    {
+      "op": "strcmp",
+      "a": "a",
+      "ao": 0,
+      "b": "b",
+      "bo": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

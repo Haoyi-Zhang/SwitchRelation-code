@@ -1,0 +1,164 @@
+{
+  "id": "C113",
+  "family": "strict_chain",
+  "variables": [
+    "x0",
+    "x1",
+    "x2"
+  ],
+  "buffers": {
+    "a": [
+      "@x0",
+      "@x1",
+      "@x2",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "byte_eq",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": 0,
+      "out": "z"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$z",
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          2
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "byte_eq",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": 0,
+      "out": "z"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$z",
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "byte_lt",
+      "left": {
+        "read": [
+          "a",
+          1
+        ]
+      },
+      "right": {
+        "read": [
+          "a",
+          2
+        ]
+      },
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

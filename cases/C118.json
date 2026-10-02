@@ -1,0 +1,52 @@
+{
+  "id": "C118",
+  "family": "support_scaling",
+  "variables": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5"
+  ],
+  "buffers": {
+    "a": [
+      "@x0",
+      "@x1",
+      "@x2",
+      "@x3",
+      "@x4",
+      "@x5",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

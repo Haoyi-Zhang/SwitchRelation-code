@@ -1,0 +1,43 @@
+{
+  "id": "C061",
+  "family": "erasure_read_only",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      0,
+      "@x",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "erase_tail",
+      "buf": "a"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

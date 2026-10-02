@@ -1,0 +1,143 @@
+{
+  "id": "C144",
+  "family": "long_tail_feasibility",
+  "variables": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7"
+  ],
+  "buffers": {
+    "a": [
+      0,
+      "@v0",
+      "@v1",
+      "@v2",
+      "@v3",
+      "@v4",
+      "@v5",
+      "@v6",
+      "@v7",
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "reference": [
+    {
+      "op": "store",
+      "buf": "a",
+      "off": 0,
+      "value": 1
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_lt",
+      "left": 1,
+      "right": "$n",
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "candidate": [
+    {
+      "op": "erase_tail",
+      "buf": "a"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": 0,
+      "value": 1
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_lt",
+      "left": 1,
+      "right": "$n",
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "expected": "different"
+}

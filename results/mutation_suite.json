@@ -1,0 +1,101 @@
+{
+  "case_id": "C001",
+  "certificate_mutations": [
+    {
+      "message": "branch statement binding",
+      "mutation": "statement_binding",
+      "status": "rejected"
+    },
+    {
+      "message": "branch verdict or minimum witness",
+      "mutation": "wrong_verdict",
+      "status": "rejected"
+    },
+    {
+      "message": "branch verdict or minimum witness",
+      "mutation": "wrong_least_input",
+      "status": "rejected"
+    },
+    {
+      "message": "branch totals",
+      "mutation": "wrong_leaf_total",
+      "status": "rejected"
+    },
+    {
+      "message": "branch totals",
+      "mutation": "wrong_closed_total",
+      "status": "rejected"
+    },
+    {
+      "message": "branch totals",
+      "mutation": "wrong_depth_total",
+      "status": "rejected"
+    },
+    {
+      "message": "feasibility summary",
+      "mutation": "wrong_feasibility",
+      "status": "rejected"
+    },
+    {
+      "message": "unsupported JSON value type",
+      "mutation": "non_integer_float",
+      "status": "rejected"
+    },
+    {
+      "message": "unsupported JSON value type",
+      "mutation": "boolean_as_integer",
+      "status": "rejected"
+    },
+    {
+      "message": "leaf operational results",
+      "mutation": "leaf_operational_result",
+      "status": "rejected"
+    },
+    {
+      "message": "leaf minimum",
+      "mutation": "leaf_minimum",
+      "status": "rejected"
+    },
+    {
+      "message": "split query or partition",
+      "mutation": "split_query",
+      "status": "rejected"
+    },
+    {
+      "message": "missing feasible branch",
+      "mutation": "missing_feasible_child",
+      "status": "rejected"
+    },
+    {
+      "message": "node reference or repeated node",
+      "mutation": "repeated_node",
+      "status": "rejected"
+    },
+    {
+      "message": "unreachable certificate nodes",
+      "mutation": "unreachable_node",
+      "status": "rejected"
+    },
+    {
+      "message": "node reference or repeated node",
+      "mutation": "truncated_node_array",
+      "status": "rejected"
+    }
+  ],
+  "counted_solver_mutation_checker_obligations": 103,
+  "mutation_attempts": 18,
+  "parser_mutations": [
+    {
+      "message": "duplicate JSON key",
+      "mutation": "duplicate_json_key",
+      "status": "rejected"
+    },
+    {
+      "message": "non-finite JSON number",
+      "mutation": "nonfinite_number",
+      "status": "rejected"
+    }
+  ],
+  "replayer_domain_calls": 85,
+  "status": "pass"
+}

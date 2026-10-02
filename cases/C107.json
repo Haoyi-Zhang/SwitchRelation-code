@@ -1,0 +1,70 @@
+{
+  "id": "C107",
+  "family": "low_bit_mask",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "mask": 1,
+      "equal": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "mask": 1,
+      "equal": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

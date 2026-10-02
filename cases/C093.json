@@ -1,0 +1,58 @@
+{
+  "id": "C093",
+  "family": "scalar_width",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar",
+      "fn": "shl",
+      "left": "$n",
+      "right": 8,
+      "width": 8,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar",
+      "fn": "shl",
+      "left": "$n",
+      "right": 8,
+      "width": 8,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

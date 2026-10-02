@@ -1,0 +1,677 @@
+{
+  "branch_certificates": {
+    "certificate_bytes": 1243986,
+    "certified_cases": 166,
+    "closed_branches": 1281,
+    "counted_solver_checker_obligations": 22866,
+    "cpu_seconds": 18.258325,
+    "different_cases": 16,
+    "equivalent_cases": 150,
+    "expected_labels_matched": 166,
+    "first": "C001",
+    "last": "C166",
+    "leaves": 6281,
+    "nodes": 9986,
+    "producer_domain_calls": 11267,
+    "replayer_domain_calls": 11267,
+    "status": "pass",
+    "top_level_producer_checker_obligations": 332
+  },
+  "case_materialization": {
+    "case_count": 167,
+    "checker_obligations": 167,
+    "comparison": "parsed JSON objects exactly equal deterministic generators",
+    "first": "C001",
+    "last": "C167",
+    "status": "pass"
+  },
+  "continuation_audit": {
+    "case_materialization": {
+      "case_count": 167,
+      "checker_obligations": 167,
+      "comparison": "parsed JSON objects exactly equal deterministic generators",
+      "first": "C001",
+      "last": "C167",
+      "status": "pass"
+    },
+    "direct_concrete_audit": {
+      "assignment_checks": 480697,
+      "counted_solver_mutation_checker_obligations": 0,
+      "deterministic_sample_assignments": 2352,
+      "exhaustive_one_byte_assignments": 13312,
+      "exhaustive_two_byte_difference_assignments": 458752,
+      "exhaustive_two_byte_difference_cases": [
+        "C065",
+        "C069",
+        "C071",
+        "C073",
+        "C074",
+        "C136",
+        "C137"
+      ],
+      "includes_uncertified_C167_samples": true,
+      "leaf_minima_recomputed": 6281,
+      "program_executions": 1049174,
+      "scope": "direct concrete consistency checks; no full-domain claim for sampled multi-byte cases",
+      "status": "pass"
+    },
+    "fresh_certificate_replay": {
+      "certificates_replayed": 165,
+      "closed_branches": 993,
+      "counted_solver_checker_obligations": 6079,
+      "cpu_seconds": 5.766501625,
+      "different_cases": 16,
+      "equivalent_cases": 149,
+      "excluded_from_fresh_replay": "C166",
+      "exclusion_reason": "a full fresh C166 replay would exceed the cumulative obligation ceiling",
+      "first": "C001",
+      "last": "C165",
+      "leaves": 3000,
+      "nodes": 4921,
+      "replayer_domain_calls": 5914,
+      "status": "pass",
+      "top_level_checker_obligations": 165
+    },
+    "fresh_mutation_suite": {
+      "case_id": "C001",
+      "certificate_mutations": [
+        {
+          "message": "branch statement binding",
+          "mutation": "statement_binding",
+          "status": "rejected"
+        },
+        {
+          "message": "branch verdict or minimum witness",
+          "mutation": "wrong_verdict",
+          "status": "rejected"
+        },
+        {
+          "message": "branch verdict or minimum witness",
+          "mutation": "wrong_least_input",
+          "status": "rejected"
+        },
+        {
+          "message": "branch totals",
+          "mutation": "wrong_leaf_total",
+          "status": "rejected"
+        },
+        {
+          "message": "branch totals",
+          "mutation": "wrong_closed_total",
+          "status": "rejected"
+        },
+        {
+          "message": "branch totals",
+          "mutation": "wrong_depth_total",
+          "status": "rejected"
+        },
+        {
+          "message": "feasibility summary",
+          "mutation": "wrong_feasibility",
+          "status": "rejected"
+        },
+        {
+          "message": "unsupported JSON value type",
+          "mutation": "non_integer_float",
+          "status": "rejected"
+        },
+        {
+          "message": "unsupported JSON value type",
+          "mutation": "boolean_as_integer",
+          "status": "rejected"
+        },
+        {
+          "message": "leaf operational results",
+          "mutation": "leaf_operational_result",
+          "status": "rejected"
+        },
+        {
+          "message": "leaf minimum",
+          "mutation": "leaf_minimum",
+          "status": "rejected"
+        },
+        {
+          "message": "split query or partition",
+          "mutation": "split_query",
+          "status": "rejected"
+        },
+        {
+          "message": "missing feasible branch",
+          "mutation": "missing_feasible_child",
+          "status": "rejected"
+        },
+        {
+          "message": "node reference or repeated node",
+          "mutation": "repeated_node",
+          "status": "rejected"
+        },
+        {
+          "message": "unreachable certificate nodes",
+          "mutation": "unreachable_node",
+          "status": "rejected"
+        },
+        {
+          "message": "node reference or repeated node",
+          "mutation": "truncated_node_array",
+          "status": "rejected"
+        }
+      ],
+      "counted_solver_mutation_checker_obligations": 103,
+      "mutation_attempts": 18,
+      "parser_mutations": [
+        {
+          "message": "duplicate JSON key",
+          "mutation": "duplicate_json_key",
+          "status": "rejected"
+        },
+        {
+          "message": "non-finite JSON number",
+          "mutation": "nonfinite_number",
+          "status": "rejected"
+        }
+      ],
+      "replayer_domain_calls": 85,
+      "status": "pass"
+    },
+    "fresh_region_solver_crosscheck": {
+      "alphabet": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "brute_force_assignments": 9872,
+      "counted_solver_checker_obligations": 960,
+      "pairwise_relation_checks": 4889,
+      "producer_solver_calls": 320,
+      "region_instances": 320,
+      "replayer_solver_calls": 320,
+      "satisfiable": 124,
+      "scope": "finite solver cross-check; not a proof of arbitrary Python execution",
+      "seed": 20260916,
+      "status": "pass",
+      "unsatisfiable": 196
+    },
+    "full_abstraction_witness_audit": {
+      "differing_pairs": 1262,
+      "equivalent_pairs": 37,
+      "finite_basis_executions": 222,
+      "pair_obligations": 1299,
+      "scope": "bounded executable audit; general theorem is proved on paper",
+      "state_count": 36,
+      "status": "pass",
+      "witness_lengths": {
+        "maximum": 2,
+        "one": 324,
+        "two": 290,
+        "zero": 648
+      }
+    },
+    "resource_accounting": {
+      "counting_rule": "Direct concrete semantic assignments are reported separately. Case rematerializations, state-pair audits, region calls, top-level certificate checks, and mutation attempts are counted; repeated runs are not deduplicated.",
+      "cumulative_counted_obligations": 99695,
+      "inherited_counted_obligations": 91087,
+      "new_counted_obligations": 8608,
+      "new_direct_concrete_assignment_checks": 480697,
+      "obligation_ceiling": 100000,
+      "remaining_obligations": 305
+    },
+    "resources": {
+      "peak_rss_kib": 108768,
+      "process_cpu_seconds": 12.685252806000001,
+      "wall_seconds": 12.686364185999992,
+      "workers": 1
+    },
+    "scope": "budget-aware continuation audit; retained C166 full replay is not rerun",
+    "status": "pass"
+  },
+  "fanout_control": {
+    "case_id": "C167",
+    "counted_solver_checker_obligations": 6056,
+    "cpu_seconds": 1.720833118,
+    "local_call_guard": 14000,
+    "node_limit": 6000,
+    "predicate_limit": 48,
+    "producer_domain_calls": 6055,
+    "reason": "branch node budget",
+    "status": "unknown_resource_exhaustion",
+    "top_level_attempts": 1
+  },
+  "final_clean_extract_audit": {
+    "cases": [
+      {
+        "closed_branches": 0,
+        "counted_obligations": 2,
+        "cpu_seconds": 0.0006145509999999632,
+        "feasibility": {
+          "candidate": "sat",
+          "least_input": null,
+          "reference": "sat",
+          "verdict": "same_inputs"
+        },
+        "id": "C061",
+        "least_input": null,
+        "leaves": 1,
+        "max_predicates": 0,
+        "nodes": 1,
+        "replayer_region_calls": 1,
+        "selection_rationale": "equivalent read-only tail erasure",
+        "top_level_checker_obligations": 1,
+        "variables": 1,
+        "verdict": "equivalent"
+      },
+      {
+        "closed_branches": 1,
+        "counted_obligations": 5,
+        "cpu_seconds": 0.001309766000000101,
+        "feasibility": {
+          "candidate": "sat",
+          "least_input": null,
+          "reference": "sat",
+          "verdict": "same_inputs"
+        },
+        "id": "C062",
+        "least_input": [
+          1
+        ],
+        "leaves": 2,
+        "max_predicates": 1,
+        "nodes": 3,
+        "replayer_region_calls": 4,
+        "selection_rationale": "different result after erased tail becomes observable",
+        "top_level_checker_obligations": 1,
+        "variables": 1,
+        "verdict": "different"
+      },
+      {
+        "closed_branches": 3,
+        "counted_obligations": 35,
+        "cpu_seconds": 0.014085767000000082,
+        "feasibility": {
+          "candidate": "sat",
+          "least_input": null,
+          "reference": "sat",
+          "verdict": "same_inputs"
+        },
+        "id": "C065",
+        "least_input": [
+          0,
+          128
+        ],
+        "leaves": 20,
+        "max_predicates": 5,
+        "nodes": 31,
+        "replayer_region_calls": 34,
+        "selection_rationale": "different signed-order simplification",
+        "top_level_checker_obligations": 1,
+        "variables": 2,
+        "verdict": "different"
+      },
+      {
+        "closed_branches": 32,
+        "counted_obligations": 98,
+        "cpu_seconds": 0.188064982,
+        "feasibility": {
+          "candidate": "unsat",
+          "least_input": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "reference": "sat",
+          "verdict": "different_inputs"
+        },
+        "id": "C162",
+        "least_input": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "leaves": 33,
+        "max_predicates": 32,
+        "nodes": 65,
+        "replayer_region_calls": 97,
+        "selection_rationale": "32-byte different path-feasibility result",
+        "top_level_checker_obligations": 1,
+        "variables": 32,
+        "verdict": "different"
+      },
+      {
+        "closed_branches": 24,
+        "counted_obligations": 164,
+        "cpu_seconds": 0.10192867900000002,
+        "feasibility": {
+          "candidate": "sat",
+          "least_input": null,
+          "reference": "sat",
+          "verdict": "same_inputs"
+        },
+        "id": "C163",
+        "least_input": null,
+        "leaves": 85,
+        "max_predicates": 12,
+        "nodes": 139,
+        "replayer_region_calls": 163,
+        "selection_rationale": "eight-byte equivalent long comparison",
+        "top_level_checker_obligations": 1,
+        "variables": 8,
+        "verdict": "equivalent"
+      }
+    ],
+    "certificates_replayed": 5,
+    "cpu_seconds": 0.31011088099999995,
+    "cumulative_counted_obligations": 99999,
+    "direct_concrete_evaluations_added": 0,
+    "execution_date": "2026-09-19",
+    "inherited_counted_obligations": 99695,
+    "limits": {
+      "address_space_limit_bytes": 2621440000,
+      "cpu_affinity_guard_applied": true,
+      "workers": 1
+    },
+    "new_counted_obligations": 304,
+    "nonclaims": [
+      "This stratified replay is not a second full-campaign reproduction.",
+      "C166 retains its earlier complete replay evidence and is not replayed here.",
+      "C167 remains an explicit resource-exhaustion result rather than a semantic verdict."
+    ],
+    "obligation_ceiling": 100000,
+    "peak_rss_kib": 105648,
+    "remaining_obligations": 1,
+    "replayer_region_calls": 299,
+    "scope": "retained-certificate replay from a clean extracted candidate project",
+    "selection": [
+      "C061",
+      "C062",
+      "C065",
+      "C162",
+      "C163"
+    ],
+    "selection_policy": "predeclared stratified boundary set spanning both verdicts, tail-view mutation, signed-order mutation, 32-byte feasibility divergence, and multi-byte equivalence",
+    "status": "pass",
+    "top_level_checker_obligations": 5,
+    "wall_seconds": 0.3107752799987793
+  },
+  "full_abstraction_witness_audit": {
+    "differing_pairs": 1262,
+    "equivalent_pairs": 37,
+    "finite_basis_executions": 222,
+    "pair_obligations": 1299,
+    "scope": "bounded executable audit; general theorem is proved on paper",
+    "state_count": 36,
+    "status": "pass",
+    "witness_lengths": {
+      "maximum": 2,
+      "one": 324,
+      "two": 290,
+      "zero": 648
+    }
+  },
+  "mutation_suite": {
+    "case_id": "C001",
+    "certificate_mutations": [
+      {
+        "message": "branch statement binding",
+        "mutation": "statement_binding",
+        "status": "rejected"
+      },
+      {
+        "message": "branch verdict or minimum witness",
+        "mutation": "wrong_verdict",
+        "status": "rejected"
+      },
+      {
+        "message": "branch verdict or minimum witness",
+        "mutation": "wrong_least_input",
+        "status": "rejected"
+      },
+      {
+        "message": "branch totals",
+        "mutation": "wrong_leaf_total",
+        "status": "rejected"
+      },
+      {
+        "message": "branch totals",
+        "mutation": "wrong_closed_total",
+        "status": "rejected"
+      },
+      {
+        "message": "branch totals",
+        "mutation": "wrong_depth_total",
+        "status": "rejected"
+      },
+      {
+        "message": "feasibility summary",
+        "mutation": "wrong_feasibility",
+        "status": "rejected"
+      },
+      {
+        "message": "unsupported JSON value type",
+        "mutation": "non_integer_float",
+        "status": "rejected"
+      },
+      {
+        "message": "unsupported JSON value type",
+        "mutation": "boolean_as_integer",
+        "status": "rejected"
+      },
+      {
+        "message": "leaf operational results",
+        "mutation": "leaf_operational_result",
+        "status": "rejected"
+      },
+      {
+        "message": "leaf minimum",
+        "mutation": "leaf_minimum",
+        "status": "rejected"
+      },
+      {
+        "message": "split query or partition",
+        "mutation": "split_query",
+        "status": "rejected"
+      },
+      {
+        "message": "missing feasible branch",
+        "mutation": "missing_feasible_child",
+        "status": "rejected"
+      },
+      {
+        "message": "node reference or repeated node",
+        "mutation": "repeated_node",
+        "status": "rejected"
+      },
+      {
+        "message": "unreachable certificate nodes",
+        "mutation": "unreachable_node",
+        "status": "rejected"
+      },
+      {
+        "message": "node reference or repeated node",
+        "mutation": "truncated_node_array",
+        "status": "rejected"
+      }
+    ],
+    "counted_solver_mutation_checker_obligations": 103,
+    "mutation_attempts": 18,
+    "parser_mutations": [
+      {
+        "message": "duplicate JSON key",
+        "mutation": "duplicate_json_key",
+        "status": "rejected"
+      },
+      {
+        "message": "non-finite JSON number",
+        "mutation": "nonfinite_number",
+        "status": "rejected"
+      }
+    ],
+    "replayer_domain_calls": 85,
+    "status": "pass"
+  },
+  "primitive_oracle": {
+    "alphabet_bits": 8,
+    "canonical_assignments": 20,
+    "concrete_state_evaluations": 65536,
+    "counted_solver_checker_obligations": 0,
+    "cpu_seconds": 0.923712506,
+    "external_solver_calls": 0,
+    "full_byte_assignments": 65536,
+    "independent_byte_variables": 2,
+    "max_buffer_capacity": 4,
+    "negative_noncontiguous_cells": {
+      "after": false,
+      "before": true,
+      "same_parity_representatives": [
+        0,
+        1
+      ],
+      "x": 2,
+      "y": 1
+    },
+    "negative_tail": {
+      "candidate_length": 1,
+      "initial": [
+        0,
+        1,
+        0
+      ],
+      "overwrite": [
+        0,
+        1
+      ],
+      "reference_length": 2
+    },
+    "palette_transport_mismatches": 0,
+    "peak_rss_kib": 96300,
+    "primitive_result_components": 7,
+    "resource_note": "one CPU affinity; no external solver; direct states reported separately",
+    "semantic_mismatches": 0,
+    "status": "pass",
+    "workers": 1
+  },
+  "region_solver_crosscheck": {
+    "alphabet": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "brute_force_assignments": 11292,
+    "counted_solver_checker_obligations": 1152,
+    "pairwise_relation_checks": 5947,
+    "producer_solver_calls": 384,
+    "region_instances": 384,
+    "replayer_solver_calls": 384,
+    "satisfiable": 158,
+    "scope": "finite solver cross-check; not a proof of arbitrary Python execution",
+    "seed": 20260915,
+    "status": "pass",
+    "unsatisfiable": 226
+  },
+  "resource_accounting": {
+    "continuation_direct_concrete_assignment_checks": 480697,
+    "continuation_obligations": 8608,
+    "counting_rule": "Direct concrete semantic evaluations are reported separately. Canonical rows, region/domain calls, state-pair audits, case checks, top-level certificate checks, and mutation attempts are counted as solver/mutation/checker obligations. Repeated runs are not deduplicated.",
+    "cumulative_direct_concrete_assignment_checks": 650557,
+    "cumulative_obligations": 99999,
+    "final_clean_extract_obligations": 304,
+    "historical_concrete_state_evaluations": 92810,
+    "historical_obligations": 59444,
+    "new_concrete_state_evaluations": 77050,
+    "new_obligations": 31643,
+    "obligation_ceiling": 100000,
+    "original_final_direct_concrete_state_evaluations": 77050,
+    "original_final_obligations": 31643,
+    "remaining_obligations": 1
+  },
+  "resources": {
+    "address_space_limit_bytes": 2621440000,
+    "continuation_audit_peak_rss_kib": 108768,
+    "continuation_audit_process_cpu_seconds": 12.685252806,
+    "continuation_fanout_cpu_seconds": 1.720833118,
+    "continuation_fanout_peak_rss_kib": 100524,
+    "cpu_affinity": [
+      0
+    ],
+    "cpu_hard_limit_seconds": 115,
+    "cpu_soft_limit_seconds": 110,
+    "cumulative_process_cpu_seconds_all_retained_scientific_runs": 34.186995027,
+    "cumulative_process_cpu_seconds_including_continuation_audit": 33.876884146,
+    "final_clean_extract_audit_peak_rss_kib": 105648,
+    "final_clean_extract_audit_process_cpu_seconds": 0.31011088099999995,
+    "peak_rss_kib": 121460,
+    "peak_rss_kib_all_retained_scientific_runs": 121460,
+    "peak_rss_kib_including_continuation": 121460,
+    "process_cpu_seconds": 19.470798222000003,
+    "process_cpu_seconds_including_continuation": 21.191631340000004,
+    "swap_required": false,
+    "wall_alarm_seconds": 118,
+    "wall_seconds": 19.47671437200006,
+    "workers": 1
+  },
+  "scope": {
+    "frontend": "no C/LLVM frontend correspondence",
+    "mechanization": "executable finite checks and independent replay, not a proof assistant",
+    "security": "owned synthetic cases only",
+    "solver_translation": "no SMT-LIB string/bitvector translation correspondence"
+  },
+  "status": "pass"
+}

@@ -1,0 +1,15 @@
+{
+  "all_time_total": "unknown",
+  "case_id": "C135",
+  "classification": "separate_post_freeze_documentation_campaign",
+  "counted_obligations_under_frozen_rule": 5,
+  "frozen_ledger_subtotal": 99999,
+  "included_in_frozen_99999_ledger": false,
+  "replayer_region_calls": 4,
+  "same_rule_lower_bound_if_combined": 100004,
+  "source_record": "results/documented_replay_smoke.json",
+  "status": "pass",
+  "successful_command": "python src/branch_replay.py cases/C135.json certificates/branch/C135.json",
+  "top_level_checker_obligations": 1,
+  "uncertainty": "Other post-freeze packaging and QA actions were not consistently instrumented under the frozen campaign rule, so no exact all-time total is claimed."
+}

@@ -1,0 +1,143 @@
+{
+  "id": "C143",
+  "family": "long_parity_mask",
+  "variables": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7"
+  ],
+  "buffers": {
+    "a": [
+      "@v0",
+      "@v1",
+      "@v2",
+      "@v3",
+      "@v4",
+      "@v5",
+      "@v6",
+      "@v7",
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "reference": [
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "mask": 1,
+      "equal": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "mask": 1,
+      "equal": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

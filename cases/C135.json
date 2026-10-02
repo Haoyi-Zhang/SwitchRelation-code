@@ -1,0 +1,75 @@
+{
+  "id": "C135",
+  "family": "erasure_feasibility",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      0,
+      "@x",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "store",
+      "buf": "a",
+      "off": 0,
+      "value": 1
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$n",
+      "right": 2,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "candidate": [
+    {
+      "op": "erase_tail",
+      "buf": "a"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": 0,
+      "value": 1
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$n",
+      "right": 2,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "expected": "different"
+}

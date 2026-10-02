@@ -1,0 +1,54 @@
+{
+  "id": "C123",
+  "family": "copy_overlap",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0,
+      0,
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strcpy",
+      "src": "a",
+      "so": 0,
+      "dst": "a",
+      "do": 3
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "strcpy",
+      "src": "a",
+      "so": 0,
+      "dst": "a",
+      "do": 3
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

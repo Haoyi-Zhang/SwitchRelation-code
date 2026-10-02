@@ -1,0 +1,59 @@
+{
+  "group_sizes": [
+    7,
+    4,
+    3,
+    4
+  ],
+  "groups": [
+    {
+      "attempts": 7,
+      "mutations": [
+        "statement_binding",
+        "wrong_verdict",
+        "wrong_least_input",
+        "wrong_leaf_total",
+        "wrong_closed_total",
+        "wrong_depth_total",
+        "wrong_feasibility"
+      ],
+      "name": "top_level_binding_verdict_minimum_totals",
+      "rejected": 7
+    },
+    {
+      "attempts": 4,
+      "mutations": [
+        "non_integer_float",
+        "boolean_as_integer",
+        "leaf_operational_result",
+        "leaf_minimum"
+      ],
+      "name": "leaf_values_and_json_types",
+      "rejected": 4
+    },
+    {
+      "attempts": 3,
+      "mutations": [
+        "split_query",
+        "missing_feasible_child",
+        "truncated_node_array"
+      ],
+      "name": "query_coverage_and_truncation",
+      "rejected": 3
+    },
+    {
+      "attempts": 4,
+      "mutations": [
+        "repeated_node",
+        "unreachable_node",
+        "duplicate_json_key",
+        "nonfinite_number"
+      ],
+      "name": "graph_and_parser_structure",
+      "rejected": 4
+    }
+  ],
+  "mutually_exclusive": true,
+  "status": "pass",
+  "total_mutations": 18
+}

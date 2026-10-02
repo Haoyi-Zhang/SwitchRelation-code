@@ -1,0 +1,11 @@
+{
+  "cap_status": "unknown_resource_exhaustion",
+  "case_id": "C167",
+  "completed_certificate_exists": false,
+  "included_in_166_completed_verdicts": false,
+  "interpretation": "The resource-exhaustion result supersedes any use of the schema expected field as a validated verdict; no equivalence, difference, SAT, UNSAT, or least-witness claim is made for C167.",
+  "schema_expected_field": "equivalent",
+  "schema_expected_field_provenance": "generator default/provisional label",
+  "semantic_verdict_from_cap_run": null,
+  "status": "pass"
+}

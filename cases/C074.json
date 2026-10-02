@@ -1,0 +1,39 @@
+{
+  "id": "C074",
+  "family": "unterminated_accepted",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      "@y"
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "strlen_capacity",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "different"
+}

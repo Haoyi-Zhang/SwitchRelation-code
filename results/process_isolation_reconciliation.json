@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "original_batch": {
+    "cases": "C001-C166",
+    "mode": "producer and replayer used the in-memory proof object in one original process before retained files were written",
+    "fresh_process_per_certificate": false,
+    "source": "historical final_reproduction.json plus the original workflow description; the retained summary does not record per-certificate subprocesses"
+  },
+  "continuation_audit": {
+    "cases": "C001-C165",
+    "mode": "stored certificate files re-read and replayed in one continuation-audit process",
+    "fresh_process_per_certificate": false
+  },
+  "clean_extract_audit": {
+    "cases": ["C061", "C062", "C065", "C162", "C163"],
+    "mode": "five stored certificate files re-read and replayed in one clean-extract process",
+    "fresh_process_per_certificate": false
+  },
+  "isolated_campaign": {
+    "cases": "C001-C166",
+    "mode": "new certificates serialized to the external campaign directory and re-read in one campaign process",
+    "fresh_process_per_certificate": false,
+    "independent_cli_smoke": "C135 only"
+  },
+  "documented_C135_cli_smoke": {
+    "mode": "independent CLI process",
+    "replayer_region_calls": 4,
+    "top_level_checker_obligations": 1,
+    "counted_obligations": 5
+  },
+  "no_claim": "No evidence supports a claim that every certificate was replayed in a fresh process."
+}

@@ -1,0 +1,129 @@
+{
+  "id": "C137",
+  "family": "signed_feasibility",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0
+    ],
+    "b": [
+      "@y",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "byte_eq",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "b",
+          0
+        ]
+      },
+      "mask": 128,
+      "equal": 128,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strcmp",
+      "a": "a",
+      "ao": 0,
+      "b": "b",
+      "bo": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_lt",
+      "left": "$n",
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "candidate": [
+    {
+      "op": "byte_eq",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "b",
+          0
+        ]
+      },
+      "mask": 128,
+      "equal": 128,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strcmp_signed",
+      "a": "a",
+      "ao": 0,
+      "b": "b",
+      "bo": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_lt",
+      "left": "$n",
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "expected": "different"
+}

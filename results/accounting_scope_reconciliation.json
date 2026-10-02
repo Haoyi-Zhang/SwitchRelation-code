@@ -1,0 +1,76 @@
+{
+  "concrete_input_assignment_enumerations": {
+    "continuation_direct_case_audit": 480697,
+    "continuation_fresh_region_crosscheck": 9872,
+    "inherited_note": "The retained inherited field is not sufficiently disaggregated to establish that every unit is the same kind of concrete input assignment; it is not folded into the named subtotal.",
+    "inherited_undisaggregated_record": 92810,
+    "named_subtotal_excluding_inherited_undisaggregated_record": 567397,
+    "original_primitive_oracle": 65536,
+    "original_region_crosscheck": 11292
+  },
+  "frozen_obligation_ledger": {
+    "all_time_total": "unknown",
+    "ceiling": 100000,
+    "counted_obligations": 99999,
+    "not_an_all_time_total": true,
+    "post_freeze_C135_cli_obligations": 5,
+    "remaining_within_that_frozen_ledger": 1,
+    "same_rule_lower_bound_after_C135_cli": 100004,
+    "scope": "historical campaign through the five-case clean-extract replay only"
+  },
+  "region_enumeration_disclosure": {
+    "continuation_brute_force_assignments": 9872,
+    "continuation_region_instances": 320,
+    "included_in_old_650557_display": false,
+    "original_brute_force_assignments": 11292
+  },
+  "single_side_program_execution_counts": {
+    "continuation_direct_case_audit": 1049174,
+    "no_grand_total_claimed": "Runs overlap and inherited records do not preserve all units needed for a single historical execution total.",
+    "original_full_abstraction_derived_from_recorded_context_comparisons": 2968,
+    "post_repair_fixed_basis_audit": 49294,
+    "repeated_full_abstraction_derived_from_recorded_context_comparisons": 2968
+  },
+  "source_files": [
+    "results/resource_accounting.csv",
+    "results/full_abstraction_check.json",
+    "results/full_abstraction_reconciliation.json",
+    "results/region_crosscheck.json",
+    "results/final_continuation_audit.json",
+    "results/documented_replay_smoke_accounting.json"
+  ],
+  "state_pair_and_context_checks": {
+    "original_full_abstraction_run": {
+      "base_state_pairs": 1296,
+      "directed_controls": 3,
+      "note": "The historical finite_basis_executions=222 field counted pair-level comparisons for 37 related pairs times six old tests. It omitted the 1,262 unrelated-pair witness comparisons from that named field.",
+      "related_pair_old_basis_context_comparisons": 222,
+      "single_side_program_executions": 2968,
+      "total_pair_checks": 1299,
+      "unrelated_state_dependent_witness_context_comparisons": 1262
+    },
+    "post_repair_fixed_basis_audit": {
+      "base_state_pairs": 1296,
+      "directed_controls": 3,
+      "fixed_basis_pair_test_comparisons": 23382,
+      "includes_byte_2_vs_3_sanity": true,
+      "outside_frozen_99999_ledger": true,
+      "single_side_program_executions": 49294,
+      "state_dependent_witness_context_comparisons": 1262,
+      "total_pair_checks": 1299
+    },
+    "repeated_continuation_full_abstraction_run": {
+      "base_state_pairs": 1296,
+      "directed_controls": 3,
+      "related_pair_old_basis_context_comparisons": 222,
+      "single_side_program_executions": 2968,
+      "total_pair_checks": 1299,
+      "unrelated_state_dependent_witness_context_comparisons": 1262
+    }
+  },
+  "status": "pass",
+  "superseded_mixed_total": {
+    "reason_not_used": "It added an inherited undisaggregated field, primitive/region assignments, 222 pair-level context comparisons, and continuation assignment checks while omitting the later 9,872 region assignments and 1,262 witness context comparisons. The units and coverage were therefore mixed.",
+    "value": 650557
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "C136",
+  "family": "terminator_feasibility",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      "@y",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strchr",
+      "buf": "a",
+      "off": 0,
+      "char": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_lt",
+      "left": -1,
+      "right": "$n",
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "candidate": [
+    {
+      "op": "strchr_no_zero",
+      "buf": "a",
+      "off": 0,
+      "char": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_lt",
+      "left": -1,
+      "right": "$n",
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "expected": "different"
+}

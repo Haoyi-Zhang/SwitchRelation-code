@@ -1,0 +1,57 @@
+{
+  "id": "C068",
+  "family": "omit_copy_redundant",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0
+    ],
+    "b": [
+      0,
+      0,
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strcpy",
+      "dst": "b",
+      "do": 0,
+      "src": "a",
+      "so": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "b",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "copy_no_zero",
+      "dst": "b",
+      "do": 0,
+      "src": "a",
+      "so": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "b",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

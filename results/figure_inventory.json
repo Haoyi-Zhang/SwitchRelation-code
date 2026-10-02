@@ -1,0 +1,35 @@
+{
+  "count": 5,
+  "figures": [
+    {
+      "source": "main.tex",
+      "label": "fig:relations",
+      "caption": "Universal and continuation-specific contracts.  Allocation equivalence\nis exact for all continuations.  A checked certificate for one continuation pair\nmay induce a coarser partition, but its justification is local to that pair.",
+      "tikz": false
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:tail",
+      "caption": "An initialized tail can become observable.  The prefix-only candidate\nmaps $[0,x,0]$ to $[0,0,0]$.  After storing $1$ at index zero, the correct length\nis $2$ for $x$, whereas the candidate always returns $1$.",
+      "tikz": false
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:pipeline",
+      "caption": "Producer and replayer pipeline.  The producer may be complex and is not\ntrusted for acceptance.  The replayer recomputes regional facts and operational\nresults with different algorithms before accepting a complete certificate.",
+      "tikz": false
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:partition",
+      "caption": "A three-way order query partitions a region. The replayer checks every\nanswer-region; only a proved-empty answer may omit a child. Each feasible child\nmust continue to checked leaves. The drawing describes the certificate contract,\nnot a measured tree or an SMT proof calculus.",
+      "tikz": false
+    },
+    {
+      "source": "main.tex",
+      "label": "fig:trust",
+      "caption": "Trust boundary.  The producer is outside the acceptance base; the ordinary\nPython replayer and runtime remain trusted.  C/LLVM and SMT encodings are not\nconnected to the model by this work.",
+      "tikz": false
+    }
+  ]
+}

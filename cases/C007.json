@@ -1,0 +1,60 @@
+{
+  "id": "C007",
+  "family": "overlap_move",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      "@y",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "memmove",
+      "src": "a",
+      "so": 0,
+      "dst": "a",
+      "do": 1,
+      "n": 2
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "memmove",
+      "src": "a",
+      "so": 0,
+      "dst": "a",
+      "do": 1,
+      "n": 2
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

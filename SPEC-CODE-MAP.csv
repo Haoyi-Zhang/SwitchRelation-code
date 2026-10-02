@@ -1,0 +1,14 @@
+Claim,Formal object,Implementation file,Symbol,Definition line,Executable evidence,Boundary
+Allocation relation,retained state components and quotients,src/contextual.py,allocation_equivalent,121,finite pair/control audit,No C/LLVM or Python refinement theorem
+State-dependent short separator,constructive converse witness,src/contextual.py,distinguishing_continuation,152,1262 unrelated-pair checks with maximum length two,Literal may depend on the compared states
+Fixed complete basis,state-independent interface-indexed tests,src/contextual.py,fixed_complete_basis,211,23382 pair/test comparisons plus all-byte signature audit,Requires finite B and declared mask_eq predicate
+Probe terminal observation,status/fault plus emissions with local erasure,src/contextual.py,run_basis_continuation,244,byte-2/3 and fixed-basis tests,Only the proof-probe sublanguage
+General concrete execution,paired case terminal semantics,src/replay.py,interpret,91,retained direct and certificate audits,No proof-assistant refinement theorem
+Region feasibility,finite-domain unary/equality/order constraints,src/branch_replay.py,region,53,384 plus 320 finite cross-check instances,Relies on replay-kernel implementation
+Least regional model,coordinatewise minimum,src/branch_replay.py,Region.minimum,49,leaf-minimum replay and brute-force cross-check,Bounded declared byte domain
+Certificate coverage and replay,complete feasible-child traversal and leaf re-execution,src/branch_replay.py,check,297,166 retained certificates and 18 mutations,Accepted result is conditional on this kernel
+Certificate JSON loading,size duplicate-key and nonfinite rejection,src/replay.py,load,245,CLI smoke and parser mutations,Depth bound is supplied by the structural strict loader
+Corpus strict parsing,size depth duplicate-key nonfinite and top-level type checks,src/strict_json.py,load_strict,50,166-file structural audit and hostile parser tests,Semantic fields remain replayer responsibility
+Full-abstraction finite audit,base pairs directed controls fixed basis and witnesses,src/check_full_abstraction.py,run,75,1296 base pairs plus 3 controls and 49294 executions,Finite check does not prove the quantified theorem
+Isolated input integrity,scoped artifact-tree digest,reproduce.py,tree_digest,95,read-only disposable-copy campaign before/after match,Self-referential acceptance record explicitly excluded
+External campaign output,refusal of in-tree or existing output,reproduce.py,require_external_output,111,isolated campaign and immutable merge contract,POSIX resource interfaces required by driver

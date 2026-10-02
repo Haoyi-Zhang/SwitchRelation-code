@@ -1,0 +1,162 @@
+{
+  "id": "C142",
+  "family": "bounded_extension",
+  "variables": [
+    "v0",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "v7"
+  ],
+  "buffers": {
+    "a": [
+      "@v0",
+      "@v1",
+      "@v2",
+      "@v3",
+      "@v4",
+      "@v5",
+      "@v6",
+      "@v7",
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "old"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": "$old",
+      "value": 1
+    },
+    {
+      "op": "scalar",
+      "fn": "add",
+      "left": "$old",
+      "right": 1,
+      "width": 8,
+      "out": "next"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": "$next",
+      "value": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "old"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": "$old",
+      "value": 1
+    },
+    {
+      "op": "scalar",
+      "fn": "add",
+      "left": "$old",
+      "right": 1,
+      "width": 8,
+      "out": "next"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": "$next",
+      "value": 0
+    },
+    {
+      "op": "const",
+      "value": "$next",
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

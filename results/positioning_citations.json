@@ -1,0 +1,30 @@
+{
+  "selected": [
+    "poeplau2020",
+    "abdulla2014",
+    "necula1997",
+    "pnueli1998"
+  ],
+  "entries": [
+    {
+      "key": "poeplau2020",
+      "title": "Symbolic Execution with SymCC: Don't Interpret, Compile!",
+      "bib": "reference_audit.csv"
+    },
+    {
+      "key": "abdulla2014",
+      "title": "String Constraints for Verification",
+      "bib": "reference_audit.csv"
+    },
+    {
+      "key": "necula1997",
+      "title": "Proof-Carrying Code",
+      "bib": "reference_audit.csv"
+    },
+    {
+      "key": "pnueli1998",
+      "title": "Translation Validation",
+      "bib": "reference_audit.csv"
+    }
+  ]
+}

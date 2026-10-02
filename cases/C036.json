@@ -1,0 +1,93 @@
+{
+  "id": "C036",
+  "family": "concatenate",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17
+    ],
+    "b": [
+      "@y",
+      0,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17
+    ]
+  },
+  "reference": [
+    {
+      "op": "strcat",
+      "src": "a",
+      "so": 0,
+      "dst": "b",
+      "do": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "b",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "switch",
+      "buf": "b"
+    },
+    {
+      "op": "strcat",
+      "src": "a",
+      "so": 0,
+      "dst": "b",
+      "do": 0
+    },
+    {
+      "op": "strlen",
+      "buf": "b",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

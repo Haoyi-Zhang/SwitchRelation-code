@@ -1,0 +1,21 @@
+{
+  "commands_discovered": [
+    "python inspect_packet.py",
+    "python src/branch_replay.py cases/C135.json certificates/branch/C135.json"
+  ],
+  "commands_run": [
+    {
+      "command": "python inspect_packet.py",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"campaign_status\": \"pass\",\n  \"case_schemas\": 167,\n  \"certificate_bytes\": 1243986,\n  \"certificate_files\": 166,\n  \"claim_ledger_rows\": 31,\n  \"closed_branches\": 1281,\n  \"cumulative_obligations\": 99999,\n  \"different_cases\": 16,\n  \"direct_concrete_evaluations\": 650557,\n  \"equivalent_cases\": 150,\n  \"external_resource_rows\": 30,\n  \"fanout_status\": \"unknown_resource_exhaustion\",\n  \"final_clean_certificates_replayed\": 5,\n  \"final_clean_obligations\": 304,\n  \"final_clean_replay_status\": \"pass\",\n  \"final_clean_replayer_region_calls\": 299,\n  \"leaves\": 6281,\n  \"nodes\": 9986,\n  \"python_files_parsed\": 20,\n  \"reference_audit_rows\": 48,\n  \"remaining_obligations\": 1,\n  \"semantic_reproduction\": \"RETAINED_RESULTS_PLUS_FINAL_STRATIFIED_REPLAY\",\n  \"status\": \"PACKET_STRUCTURE_OK\"\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": "python src/branch_replay.py cases/C135.json certificates/branch/C135.json",
+      "returncode": 0,
+      "stdout_tail": "{\"closed_branches\": 1, \"feasibility\": {\"candidate\": \"unsat\", \"least_input\": [1], \"reference\": \"sat\", \"verdict\": \"different_inputs\"}, \"full_domain\": 256, \"id\": \"C135\", \"least_input\": [1], \"leaves\": 2, \"max_predicates\": 1, \"nodes\": 3, \"verdict\": \"different\"}\n",
+      "stderr_tail": ""
+    }
+  ],
+  "status": "PASS"
+}

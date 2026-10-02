@@ -1,0 +1,200 @@
+{
+  "case_materialization": {
+    "case_count": 167,
+    "checker_obligations": 167,
+    "comparison": "parsed JSON objects exactly equal deterministic generators",
+    "first": "C001",
+    "last": "C167",
+    "status": "pass"
+  },
+  "direct_concrete_audit": {
+    "assignment_checks": 480697,
+    "counted_solver_mutation_checker_obligations": 0,
+    "deterministic_sample_assignments": 2352,
+    "exhaustive_one_byte_assignments": 13312,
+    "exhaustive_two_byte_difference_assignments": 458752,
+    "exhaustive_two_byte_difference_cases": [
+      "C065",
+      "C069",
+      "C071",
+      "C073",
+      "C074",
+      "C136",
+      "C137"
+    ],
+    "includes_uncertified_C167_samples": true,
+    "leaf_minima_recomputed": 6281,
+    "program_executions": 1049174,
+    "scope": "direct concrete consistency checks; no full-domain claim for sampled multi-byte cases",
+    "status": "pass"
+  },
+  "fresh_certificate_replay": {
+    "certificates_replayed": 165,
+    "closed_branches": 993,
+    "counted_solver_checker_obligations": 6079,
+    "cpu_seconds": 5.766501625,
+    "different_cases": 16,
+    "equivalent_cases": 149,
+    "excluded_from_fresh_replay": "C166",
+    "exclusion_reason": "a full fresh C166 replay would exceed the cumulative obligation ceiling",
+    "first": "C001",
+    "last": "C165",
+    "leaves": 3000,
+    "nodes": 4921,
+    "replayer_domain_calls": 5914,
+    "status": "pass",
+    "top_level_checker_obligations": 165
+  },
+  "fresh_mutation_suite": {
+    "case_id": "C001",
+    "certificate_mutations": [
+      {
+        "message": "branch statement binding",
+        "mutation": "statement_binding",
+        "status": "rejected"
+      },
+      {
+        "message": "branch verdict or minimum witness",
+        "mutation": "wrong_verdict",
+        "status": "rejected"
+      },
+      {
+        "message": "branch verdict or minimum witness",
+        "mutation": "wrong_least_input",
+        "status": "rejected"
+      },
+      {
+        "message": "branch totals",
+        "mutation": "wrong_leaf_total",
+        "status": "rejected"
+      },
+      {
+        "message": "branch totals",
+        "mutation": "wrong_closed_total",
+        "status": "rejected"
+      },
+      {
+        "message": "branch totals",
+        "mutation": "wrong_depth_total",
+        "status": "rejected"
+      },
+      {
+        "message": "feasibility summary",
+        "mutation": "wrong_feasibility",
+        "status": "rejected"
+      },
+      {
+        "message": "unsupported JSON value type",
+        "mutation": "non_integer_float",
+        "status": "rejected"
+      },
+      {
+        "message": "unsupported JSON value type",
+        "mutation": "boolean_as_integer",
+        "status": "rejected"
+      },
+      {
+        "message": "leaf operational results",
+        "mutation": "leaf_operational_result",
+        "status": "rejected"
+      },
+      {
+        "message": "leaf minimum",
+        "mutation": "leaf_minimum",
+        "status": "rejected"
+      },
+      {
+        "message": "split query or partition",
+        "mutation": "split_query",
+        "status": "rejected"
+      },
+      {
+        "message": "missing feasible branch",
+        "mutation": "missing_feasible_child",
+        "status": "rejected"
+      },
+      {
+        "message": "node reference or repeated node",
+        "mutation": "repeated_node",
+        "status": "rejected"
+      },
+      {
+        "message": "unreachable certificate nodes",
+        "mutation": "unreachable_node",
+        "status": "rejected"
+      },
+      {
+        "message": "node reference or repeated node",
+        "mutation": "truncated_node_array",
+        "status": "rejected"
+      }
+    ],
+    "counted_solver_mutation_checker_obligations": 103,
+    "mutation_attempts": 18,
+    "parser_mutations": [
+      {
+        "message": "duplicate JSON key",
+        "mutation": "duplicate_json_key",
+        "status": "rejected"
+      },
+      {
+        "message": "non-finite JSON number",
+        "mutation": "nonfinite_number",
+        "status": "rejected"
+      }
+    ],
+    "replayer_domain_calls": 85,
+    "status": "pass"
+  },
+  "fresh_region_solver_crosscheck": {
+    "alphabet": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "brute_force_assignments": 9872,
+    "counted_solver_checker_obligations": 960,
+    "pairwise_relation_checks": 4889,
+    "producer_solver_calls": 320,
+    "region_instances": 320,
+    "replayer_solver_calls": 320,
+    "satisfiable": 124,
+    "scope": "finite solver cross-check; not a proof of arbitrary Python execution",
+    "seed": 20260916,
+    "status": "pass",
+    "unsatisfiable": 196
+  },
+  "full_abstraction_witness_audit": {
+    "differing_pairs": 1262,
+    "equivalent_pairs": 37,
+    "finite_basis_executions": 222,
+    "pair_obligations": 1299,
+    "scope": "bounded executable audit; general theorem is proved on paper",
+    "state_count": 36,
+    "status": "pass",
+    "witness_lengths": {
+      "maximum": 2,
+      "one": 324,
+      "two": 290,
+      "zero": 648
+    }
+  },
+  "resource_accounting": {
+    "counting_rule": "Direct concrete semantic assignments are reported separately. Case rematerializations, state-pair audits, region calls, top-level certificate checks, and mutation attempts are counted; repeated runs are not deduplicated.",
+    "cumulative_counted_obligations": 99695,
+    "inherited_counted_obligations": 91087,
+    "new_counted_obligations": 8608,
+    "new_direct_concrete_assignment_checks": 480697,
+    "obligation_ceiling": 100000,
+    "remaining_obligations": 305
+  },
+  "resources": {
+    "peak_rss_kib": 108768,
+    "process_cpu_seconds": 12.685252806000001,
+    "wall_seconds": 12.686364185999992,
+    "workers": 1
+  },
+  "scope": "budget-aware continuation audit; retained C166 full replay is not rerun",
+  "status": "pass"
+}

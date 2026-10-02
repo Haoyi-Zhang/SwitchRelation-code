@@ -1,0 +1,12 @@
+{
+  "case_id": "C167",
+  "counted_solver_checker_obligations": 6056,
+  "cpu_seconds": 1.720833118,
+  "local_call_guard": 14000,
+  "node_limit": 6000,
+  "predicate_limit": 48,
+  "producer_domain_calls": 6055,
+  "reason": "branch node budget",
+  "status": "unknown_resource_exhaustion",
+  "top_level_attempts": 1
+}

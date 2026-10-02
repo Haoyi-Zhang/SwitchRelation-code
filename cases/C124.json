@@ -1,0 +1,62 @@
+{
+  "id": "C124",
+  "family": "last_byte_terminator",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      1,
+      1,
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "strchr",
+      "buf": "a",
+      "off": 0,
+      "char": 0,
+      "out": "p"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    },
+    {
+      "op": "emit",
+      "value": "$p"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "strchr",
+      "buf": "a",
+      "off": 0,
+      "char": 0,
+      "out": "p"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    },
+    {
+      "op": "emit",
+      "value": "$p"
+    }
+  ],
+  "expected": "equivalent"
+}

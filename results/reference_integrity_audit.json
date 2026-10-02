@@ -1,0 +1,17 @@
+{
+  "bibliographic_metadata_or_proceedings_scopes": 28,
+  "cited_in_manuscript": 48,
+  "doi_entries": 45,
+  "entries": 48,
+  "execution_date": "2026-09-19",
+  "limitations": [
+    "The structural audit does not claim that every paper was read cover to cover.",
+    "The audit records retained verification scopes rather than creating a bibliometric quality score.",
+    "Novelty and venue fit still require independent human judgment before external submission."
+  ],
+  "official_url_entries": 3,
+  "scope": "structural bibliography and retained verification-scope audit",
+  "status": "pass",
+  "substantive_full_text_section_scopes": 20,
+  "unique_citation_keys": 48
+}

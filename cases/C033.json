@@ -1,0 +1,59 @@
+{
+  "id": "C033",
+  "family": "find_literal",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      "@y",
+      0,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17
+    ]
+  },
+  "reference": [
+    {
+      "op": "strchr",
+      "buf": "a",
+      "off": 0,
+      "char": 1,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "strchr",
+      "buf": "a",
+      "off": 0,
+      "char": 1,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

@@ -1,0 +1,9 @@
+Claim,Class,Location,Evidence,Boundary
+Exact maximal universal switching relation,mathematical theorem,paper Section 3 and proofs/full_abstraction.md,lockstep simulation plus constructive converse,bounded language and stated terminal observations
+Fixed state-independent complete basis,mathematical theorem,paper finite-basis subsection and proofs/full_abstraction.md,"empty/scalar/8-bit probe proof; byte-2/3 and all-byte executable checks",global finite B; capacity remains state data
+Persistent/local namespace and terminal observation contract,semantic definition,paper Section 2 and src/contextual.py,scope/erasure tests and executable probes,paper language only
+Conditional accepted-certificate contract,conditional executable theorem,paper Section 5 and TRUSTED-COMPUTING-BASE.md,"coverage induction, replay, finite oracles, spec-code map",conditional on replay-kernel conformance
+Strict untrusted-JSON preflight,executable safety property,src/strict_json.py and tests/test_strict_json.py,duplicate/nonfinite/depth/size/type rejection,semantic fields remain replayer responsibility
+Full-abstraction audit reconciliation,finite executable check,src/check_full_abstraction.py and results/full_abstraction_reconciliation.json,"1296 base pairs + 3 controls; 49294 single-side executions; all-byte signature audit",does not prove the quantified theorem or Python refinement
+Isolated reproduction without retained-tree replacement,reproducibility claim,reproduce.py and results/isolated_campaign_acceptance.json,"external campaign output; scoped digest unchanged; result closure; one C135 CLI smoke",same platform class and stated CPython/POSIX prerequisites
+Scoped historical accounting,measurement/reconciliation,paper resource table and results/accounting_scope_reconciliation.json,"99999 frozen subset; C135 +5; units separated",exact all-time total is unknown

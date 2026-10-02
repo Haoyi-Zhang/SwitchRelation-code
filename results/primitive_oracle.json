@@ -1,0 +1,41 @@
+{
+  "alphabet_bits": 8,
+  "canonical_assignments": 20,
+  "concrete_state_evaluations": 65536,
+  "counted_solver_checker_obligations": 0,
+  "cpu_seconds": 0.923712506,
+  "external_solver_calls": 0,
+  "full_byte_assignments": 65536,
+  "independent_byte_variables": 2,
+  "max_buffer_capacity": 4,
+  "negative_noncontiguous_cells": {
+    "after": false,
+    "before": true,
+    "same_parity_representatives": [
+      0,
+      1
+    ],
+    "x": 2,
+    "y": 1
+  },
+  "negative_tail": {
+    "candidate_length": 1,
+    "initial": [
+      0,
+      1,
+      0
+    ],
+    "overwrite": [
+      0,
+      1
+    ],
+    "reference_length": 2
+  },
+  "palette_transport_mismatches": 0,
+  "peak_rss_kib": 96300,
+  "primitive_result_components": 7,
+  "resource_note": "one CPU affinity; no external solver; direct states reported separately",
+  "semantic_mismatches": 0,
+  "status": "pass",
+  "workers": 1
+}

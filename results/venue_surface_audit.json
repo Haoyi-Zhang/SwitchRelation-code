@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "facts": {
+    "documentclass_acmart": true,
+    "acmsmall_option": true,
+    "title": true,
+    "author_command": true,
+    "abstract": true,
+    "keywords": true,
+    "ccsdesc": true,
+    "bibliography": true,
+    "ai_disclosure": false,
+    "artifact_statement": false,
+    "fake_repo": false
+  },
+  "changes": [
+    "CCS concepts added"
+  ],
+  "issues": [],
+  "human_required": [
+    "real author metadata and ORCIDs",
+    "funding/conflict/acknowledgment verification",
+    "current venue portal settings",
+    "public archival artifact URL if chosen"
+  ]
+}

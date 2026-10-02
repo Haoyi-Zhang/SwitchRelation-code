@@ -1,0 +1,65 @@
+{
+  "id": "C071",
+  "family": "alias_invalidation",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0,
+      "@y",
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "old"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": 1,
+      "value": 1
+    },
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "old"
+    },
+    {
+      "op": "store_stale",
+      "buf": "a",
+      "off": 1,
+      "value": 1
+    },
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "different"
+}

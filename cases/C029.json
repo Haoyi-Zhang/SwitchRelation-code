@@ -1,0 +1,81 @@
+{
+  "id": "C029",
+  "family": "high_mask",
+  "variables": [
+    "x",
+    "y"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      "@y",
+      0,
+      17,
+      17,
+      17,
+      17,
+      17
+    ]
+  },
+  "reference": [
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "mask": 128,
+      "equal": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "candidate": [
+    {
+      "op": "switch",
+      "buf": "a"
+    },
+    {
+      "op": "mask_eq",
+      "value": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "mask": 128,
+      "equal": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "emit",
+      "value": "$n"
+    }
+  ],
+  "expected": "equivalent"
+}

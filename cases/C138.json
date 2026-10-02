@@ -1,0 +1,125 @@
+{
+  "id": "C138",
+  "family": "cache_feasibility",
+  "variables": [
+    "x"
+  ],
+  "buffers": {
+    "a": [
+      "@x",
+      0,
+      0
+    ]
+  },
+  "reference": [
+    {
+      "op": "byte_eq",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": 0,
+      "out": "z"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$z",
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "old"
+    },
+    {
+      "op": "store",
+      "buf": "a",
+      "off": 1,
+      "value": 1
+    },
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$n",
+      "right": 2,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "candidate": [
+    {
+      "op": "byte_eq",
+      "left": {
+        "read": [
+          "a",
+          0
+        ]
+      },
+      "right": 0,
+      "out": "z"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$z",
+      "right": 0,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "old"
+    },
+    {
+      "op": "store_stale",
+      "buf": "a",
+      "off": 1,
+      "value": 1
+    },
+    {
+      "op": "strlen_cached",
+      "buf": "a",
+      "off": 0,
+      "out": "n"
+    },
+    {
+      "op": "scalar_eq",
+      "left": "$n",
+      "right": 2,
+      "out": "g"
+    },
+    {
+      "op": "assume",
+      "value": "$g"
+    },
+    {
+      "op": "emit",
+      "value": 1
+    }
+  ],
+  "expected": "different"
+}

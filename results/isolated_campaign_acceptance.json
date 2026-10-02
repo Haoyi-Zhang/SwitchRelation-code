@@ -1,0 +1,85 @@
+{
+  "artifact_inputs_unchanged": true,
+  "campaign_obligation_accounting": {
+    "campaign_total": 31648,
+    "case_materialization_checks": 167,
+    "certificate_campaign": 22866,
+    "fanout_control": 6056,
+    "full_abstraction_pair_checks": 1299,
+    "independent_cli_smoke": 5,
+    "mutation_suite": 103,
+    "region_crosscheck": 1152
+  },
+  "campaign_summary": "campaign_summary.json in the separately delivered isolated-campaign directory",
+  "certificate_replay_mode": {
+    "all_166_generated_certificates": "serialized file reread, same campaign process",
+    "independent_process_smoke": "C135 only",
+    "no_claim": "not every certificate is replayed in a fresh process"
+  },
+  "digest_scope": "all artifact files except bytecode/cache and the self-referential results/isolated_campaign_acceptance.json record",
+  "excluded_self_record": "results/isolated_campaign_acceptance.json",
+  "fanout_control": {
+    "case_id": "C167",
+    "counted_solver_checker_obligations": 6056,
+    "cpu_seconds": 1.231876337000001,
+    "node_limit": 6000,
+    "predicate_limit": 48,
+    "producer_domain_calls": 6055,
+    "reason": "branch node budget",
+    "schema_expected_field": "equivalent",
+    "schema_expected_field_is_not_a_validated_verdict": true,
+    "status": "unknown_resource_exhaustion",
+    "top_level_attempts": 1
+  },
+  "independent_cli_smoke": {
+    "case_id": "C135",
+    "counted_obligations": 5,
+    "process_mode": "independent_cli_process",
+    "replayer_region_calls": 4,
+    "status": "pass",
+    "top_level_checker_obligations": 1,
+    "verdict": "different"
+  },
+  "input_bytes": 1858929,
+  "input_file_count": 398,
+  "platform": {
+    "byteorder": "little",
+    "limits": {
+      "address_space_limit_bytes": 2621440000,
+      "cpu_affinity": [
+        0
+      ],
+      "cpu_hard_limit_seconds": 115,
+      "cpu_soft_limit_seconds": 110,
+      "wall_alarm_seconds": 118,
+      "workers": 1
+    },
+    "machine": "x86_64",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python_executable": "/opt/pyvenv/bin/python",
+    "python_implementation": "CPython",
+    "python_version": "3.13.5",
+    "standard_library_only": true,
+    "system": "Linux",
+    "tested_prerequisite": "CPython 3.11 or newer on a POSIX-like system with resource limits; the semantic modules themselves use only the standard library"
+  },
+  "result_closure": {
+    "all_certificates_serialized_reread_same_process": true,
+    "all_expected_labels_matched": true,
+    "case_rows": 166,
+    "certificate_bytes": 1243986,
+    "certificate_files": 166,
+    "closed_branches": 1281,
+    "independent_cli_smoke_cases": 1,
+    "leaves": 6281,
+    "nodes": 9986,
+    "status": "pass"
+  },
+  "retained_evidence_snapshot": "retained-evidence/artifact",
+  "scientific_input_tree_sha256_after": "700df448acfaadd6ea1bdf2021901bfd8b30fbae9de59c951d797f9f04994820",
+  "scientific_input_tree_sha256_before": "700df448acfaadd6ea1bdf2021901bfd8b30fbae9de59c951d797f9f04994820",
+  "scope": "post-repair isolated acceptance campaign; separate from the frozen historical 99,999 ledger",
+  "source": "disposable read-only copy of the artifact; all outputs external to that copy",
+  "static_assets_snapshot": "static-inputs/artifact",
+  "status": "pass"
+}
