@@ -290,7 +290,7 @@ def run() -> dict[str, Any]:
 
     counted = (
         materialization["checker_obligations"]
-        + full_abstraction["pair_obligations"]
+        + full_abstraction["pair_checks_total"]
         + region_crosscheck["counted_solver_checker_obligations"]
         + prefix_replay["counted_solver_checker_obligations"]
         + mutation["counted_solver_mutation_checker_obligations"]
