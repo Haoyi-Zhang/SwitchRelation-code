@@ -68,9 +68,10 @@ first failing vertex and also fails.  If it succeeds, all equalities, unary
 membership restrictions, and strict edges are satisfied.  QED.
 
 `src/order_domain.py` and `src/branch_replay.py` deliberately implement this
-reasoning differently: the producer propagates interval/allowed-set bounds over
-contracted components, while the replayer reconstructs its own region and greedy
-minimum.  Their shared mathematical specification does not make either Python
+reasoning differently: the producer contracts equalities and uses topological
+least assignment, while the replayer retains the original nodes and computes
+its minimum by finite-domain lower/upper endpoint relaxation.  Their shared
+mathematical specification does not make either Python
 implementation formally verified.
 
 **Lemma 3 (least regional assignment).**  For every satisfiable region, the
@@ -78,7 +79,7 @@ greedy topological construction returns the coordinatewise least assignment in
 declared input order among assignments satisfying that region.
 
 **Proof.**  Equality contraction fixes equal variables together.  Consider the
-first component, in the replayer's deterministic topological/tie order, where a
+first component, in the producer's deterministic topological/tie order, where a
 satisfying assignment is smaller than the greedy result.  All predecessor values
 are at least their greedy values by minimality of the first difference.  The
 supposed smaller value is therefore either outside the component's allowed set or
@@ -88,6 +89,14 @@ QED.
 
 The coordinatewise statement is stronger than needed for a lexicographic
 minimum.  Deterministic variable order handles incomparable components.
+
+For the replayer, the separate endpoint-relaxation argument in the paper applies:
+lower bounds remain below every satisfying assignment and upper bounds remain
+above it. Each effective update advances an endpoint in its exact finite domain.
+Failure excludes every model; at a successful fixed point the lower vector is
+itself a model below every model. Equality uses two zero-step edges rather than
+contraction, so this argument does not require the replayer to topologically
+order equality components.
 
 ## 3. Region-uniform execution
 
