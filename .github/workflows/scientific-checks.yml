@@ -12,7 +12,6 @@ jobs:
     env:
       PYTHONUTF8: '1'
       PYTHONDONTWRITEBYTECODE: '1'
-      EVIDENCE: ${{ runner.temp }}/p086-scientific-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
@@ -22,6 +21,8 @@ jobs:
           python-version: '3.12'
       - name: Whole bounded local scientific run
         shell: bash
+        env:
+          EVIDENCE: ${{ runner.temp }}/p086-scientific-${{ github.run_id }}-${{ github.run_attempt }}
         run: |
           mkdir -p "$EVIDENCE"
           set -o pipefail
@@ -38,7 +39,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: p086-scientific-${{ github.run_id }}-${{ github.run_attempt }}
-          path: ${{ env.EVIDENCE }}
+          path: ${{ runner.temp }}/p086-scientific-${{ github.run_id }}-${{ github.run_attempt }}
           include-hidden-files: true
           if-no-files-found: warn
           retention-days: 14
