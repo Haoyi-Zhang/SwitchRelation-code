@@ -10,7 +10,11 @@ interface while having different capacities.
 
 A continuation may read persistent registers and bind fresh scalar temporaries
 from a disjoint namespace `T`.  Every result binder is in `T`, no binder shadows
-`R`, and locals are discarded at termination.  The terminal observations are
+`R`, and locals are discarded at termination.  The local store is empty at
+continuation entry.  Every scalar computed before that boundary and available
+after it is a persistent interface register, including a live value carried
+across a representation switch.  Locals may be reassigned within a continuation.
+The terminal observations are
 only
 
 ```
@@ -50,7 +54,12 @@ sigma ~=ctx tau  iff  for every well-typed finite continuation K over (I,B),
 
 ## 3. Primitive preservation
 
-**Lemma 1 (expression agreement).**  From `sigma ~=A tau`, corresponding scalar
+For intermediate configurations write `sigma ~=A+ tau` when allocation
+equivalence holds and the configurations are at the same program point with equal
+local stores.  This extra equality is an induction invariant, not a new
+observable entry-state component.
+
+**Lemma 1 (expression agreement).**  From `sigma ~=A+ tau`, corresponding scalar
 expressions evaluate to the same integer.  Corresponding byte expressions either
 return the same byte or produce the same exact fault.
 
@@ -61,7 +70,7 @@ offsets; equal capacities give the same bounds decision; equal initialization
 bits give the same initialization decision; and a successful read returns an
 initialized byte equal by clause 3.  QED.
 
-**Lemma 2 (scan agreement).**  Corresponding terminator scans from related states
+**Lemma 2 (scan agreement).**  Corresponding terminator scans from `~=A+` configurations
 return the same absolute index or the same first fault.
 
 **Proof.**  Lemma 1 gives equal starts.  The scans visit equal indices under equal
@@ -69,7 +78,7 @@ capacities.  At each index the initialization bit and, when initialized, the byt
 agree.  Therefore the first zero, first uninitialized cell, or allocation end is
 the same.  QED.
 
-**Lemma 3 (cache transparency).**  In valid related states, a cached and uncached
+**Lemma 3 (cache transparency).**  In valid `~=A+` configurations, a cached and uncached
 length query produce the same scalar or fault.  Correct writes preserve cache
 validity and may leave the two partial cache maps structurally different.
 
@@ -78,8 +87,8 @@ computes that same length by Lemma 2.  Correct writes invalidate all entries for
 the written base.  QED.
 
 **Lemma 4 (one-command simulation).**  Let `c` be the same declared correct
-command on both sides.  From valid `sigma ~=A tau`, execution of `c` yields the
-same terminal observation, or valid successors related by `~=A` with equal local
+command on both sides.  From valid `sigma ~=A+ tau`, execution of `c` yields the
+same terminal observation, or valid successors related by `~=A+` with equal local
 results.
 
 **Proof.**  Case analysis follows the declared evaluation order.  Length, search,
@@ -89,7 +98,8 @@ Snapshot move reads equal complete source vectors before writes.  Copy and
 concatenation obtain equal scan endpoints, capacity checks, overlap decisions,
 and written vectors.  Scalar commands are deterministic on equal operands;
 `assume` and `emit` therefore agree.  `switch` changes only the quotiented view
-tag.  Every result binder is a fresh local on both sides.  QED.
+tag.  Every result binder is local on both sides; a first assignment or an
+overwrite installs equal results and preserves local-store equality.  QED.
 
 This lemma is about running the **same command** in two related states.  It must
 not be confused with refinement equivalence between a reference command and an
@@ -108,9 +118,10 @@ store of 0 at index 0, leaves a cache value 1 although the logical scan length i
 **Theorem 5 (universal sufficiency).**  `sigma ~=A tau` implies
 `sigma ~=ctx tau`.
 
-**Proof.**  Induct on an arbitrary finite continuation.  The empty continuation
+**Proof.**  Empty local stores at entry extend `~=A` to `~=A+`.  Induct on an
+arbitrary finite continuation with this extended invariant.  The empty continuation
 returns equal status and prior emissions.  Lemma 4 gives either equal termination
-or related successors with the same next program point.  Apply the induction
+or `~=A+` successors with the same next program point.  Apply the induction
 hypothesis.  QED.
 
 ## 5. State-dependent short witnesses

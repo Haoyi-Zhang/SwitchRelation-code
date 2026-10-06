@@ -20,9 +20,13 @@ exactly terminal observational equivalence for all well-typed continuations in t
 declared language.
 
 Persistent registers and continuation-local temporaries are disjoint.  Result
-binders are fresh locals, locals are erased at termination, and terminal
+binders are locals and may be reassigned, locals are empty at continuation entry
+and erased at termination, and terminal
 observation contains only accept/reject/fault status plus emissions.  There is no
 direct byte-output command and no final register-store observation.
+Any scalar live across a representation switch belongs to the persistent
+interface.  The intermediate simulation invariant additionally keeps local stores
+equal; entry-state allocation equivalence alone does not assert that equality.
 
 Two distinct separation results are implemented:
 
@@ -140,7 +144,7 @@ alarm.  The semantic code uses the Python standard library.  The tested
 prerequisite is CPython 3.11 or newer on a POSIX-like system with the resource
 interfaces used by the driver.
 
-Package-only checks, which do not constitute a new scientific run, are:
+Structural inspection and focused unit tests are:
 
 ```sh
 python inspect_packet.py
@@ -155,8 +159,41 @@ A single retained certificate can be checked with:
 python src/branch_replay.py cases/C135.json certificates/branch/C135.json
 ```
 
-That successful command performs four regional checks and one top-level check and
-must be accounted as five obligations in a new campaign.
+That successful single-certificate command performs four regional checks and
+one top-level check and must be accounted as five obligations in a new campaign.
+
+`inspect_packet.py` is non-semantic.  The unit tests include concrete probe and
+replay regressions, but are not the full campaign.  `structural_audit.py` writes
+its report into `results/`; use a disposable copy for that legacy command when
+preserving retained evidence.
+
+A fresh finite scientific check, with incremental evidence outside the artifact,
+is available separately from the historical POSIX reproduction driver:
+
+```sh
+python -B src/scientific_checks.py --output-dir ../scientific-run
+```
+
+This command regenerates all 167 schemas, serializes and re-reads 166 newly
+produced certificates, checks the finite basis and 384 fresh-seed regions,
+retains the 18 raw mutation controls, and requires C167 to exhaust the node cap.
+It uses a 120-second wall guard; on POSIX it also limits address space to 1 GiB
+and CPU time to 100/110 seconds.  On Windows the existing POSIX-only primitive
+oracle is explicitly skipped and no internal hard memory limit is claimed.
+Every certificate is replayed in the campaign process, not a fresh process.
+The output directory must not exist; partial outputs remain available on failure.
+The flat artifact-repository workflow bounds the whole run on Ubuntu 24.04 and
+uploads raw outputs even after a failed gate.  Preparing that workflow is not
+evidence that a hosted run has occurred.
+
+The current CPython 3.12.14 Windows finite check reproduced 150 equivalent and
+16 different certificates, 9,986 nodes, 6,281 leaves, and 1,281 closed answers.
+Its fresh seed 20261006 covered 384 regions and 10,860 finite assignments with
+no mismatch.  A separate direct audit exhausted the seven zero-origin cases,
+52 one-origin cases, and seven two-origin differing cases (472,071 assignments)
+through the direct interpreter and both concrete producer backends, then checked
+all 6,281 fresh leaf minima.  These are new, overlapping finite checks, not edits
+to the retained historical result files or the 99,999-obligation subledger.
 
 ## Repository map
 
@@ -169,6 +206,8 @@ must be accounted as five obligations in a new campaign.
 * `src/strict_json.py`: strict, size-bounded JSON loading before allocation.
 * `src/check_regions.py`, `src/primitive_oracle.py`: finite direct oracles.
 * `src/check_mutations.py`: the exact 18 mutation controls.
+* `src/scientific_checks.py`: incremental external-output finite checks for the
+  current shared loader and semantic implementation.
 * `src/merge_campaigns.py`: unit-aware merge for isolated campaign summaries.
 * `cases/`: C001--C167 schemas.
 * `certificates/branch/`: retained C001--C166 certificates.

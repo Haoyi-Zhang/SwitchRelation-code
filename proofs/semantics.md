@@ -38,6 +38,11 @@ universal theorem relates any two valid states with a common static interface;
 the experimental cases ordinarily compare two programs from one common input
 state.
 
+The theorem is evaluated at a continuation-entry boundary with empty local
+temporaries.  Live scalar values carried across that boundary belong to the
+persistent register interface.  During execution the lockstep invariant also
+requires equal local stores, including after local reassignment.
+
 ## Access order and memory operations
 
 A span `(o,n)` is in capacity `C` exactly when `0<=o`, `0<=n`, and `o+n<=C`.

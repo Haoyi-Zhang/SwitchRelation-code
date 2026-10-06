@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import copy
+from contextlib import nullcontext
 import json
 import tempfile
 from pathlib import Path
@@ -26,7 +27,7 @@ def rejected(case: dict[str, Any], mutant: dict[str, Any]) -> str:
     raise AssertionError("mutated certificate was accepted")
 
 
-def run(case: dict[str, Any], proof: dict[str, Any]) -> dict[str, Any]:
+def run(case: dict[str, Any], proof: dict[str, Any], *, evidence_dir: Path | None = None) -> dict[str, Any]:
     mutations: list[tuple[str, Callable[[dict[str, Any]], None]]] = []
 
     def add(name: str, action: Callable[[dict[str, Any]], None]) -> None:
@@ -88,14 +89,20 @@ def run(case: dict[str, Any], proof: dict[str, Any]) -> dict[str, Any]:
 
     before = branch_replay.DOMAIN_CALLS
     outcomes = []
+    if evidence_dir is not None:
+        evidence_dir.mkdir(parents=True, exist_ok=False)
     for name, action in mutations:
         mutant = copy.deepcopy(proof)
         action(mutant)
+        if evidence_dir is not None:
+            (evidence_dir / (name + ".json")).write_text(json.dumps(mutant) + "\n", encoding="utf-8")
         message = rejected(case, mutant)
         outcomes.append({"mutation": name, "status": "rejected", "message": message})
 
     parser_outcomes = []
-    with tempfile.TemporaryDirectory(prefix="certificate-parser-") as directory:
+    context = (tempfile.TemporaryDirectory(prefix="certificate-parser-")
+               if evidence_dir is None else nullcontext(evidence_dir))
+    with context as directory:
         duplicate = Path(directory) / "duplicate.json"
         duplicate.write_text('{"a":1,"a":2}\n', encoding="utf-8")
         try:

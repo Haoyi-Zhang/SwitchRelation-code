@@ -16,7 +16,9 @@ basis are proved in `full_abstraction.md`:
 * allocation equivalence retains capacity, initialization, every initialized
   byte, persistent scalars, and previous emissions, while quotienting valid cache
   representation, uninitialized payload, and the view marker;
-* command results bind fresh local scalar names, which are erased before the
+* continuation entry has an empty local store; all previously computed live
+  scalars belong to the persistent interface, while command results bind local
+  names that may be reassigned and are erased before the
   terminal observation; terminal observations contain only status or labeled
   first fault plus the emission sequence;
 * allocation equivalence is preserved by every correct primitive and is exactly

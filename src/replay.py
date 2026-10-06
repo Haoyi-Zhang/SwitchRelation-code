@@ -243,15 +243,13 @@ def check(case: dict[str,Any],certificate: dict[str,Any])->dict[str,Any]:
     return {'id':case['id'],'verdict':verdict,'rows':len(rows),'full_domain':total,'least_input':least,'weighted_counts':counts,'feasibility':feasibility}
 
 def load(path: Path):
-    require(path.stat().st_size<=64*1024*1024,'input file size')
-    def unique(pairs):
-        d={}
-        for k,v in pairs:
-            require(k not in d,'duplicate JSON key');d[k]=v
-        return d
-    def bad_constant(text):
-        raise Invalid('non-finite JSON number')
-    return json.loads(path.read_text(encoding='utf-8'),object_pairs_hook=unique,parse_constant=bad_constant)
+    # Both certificate CLIs use the same bounded, producer-independent loader
+    # as structural preflight.  Semantic exact_json checks remain separate.
+    from strict_json import load_strict, StrictJSONError
+    try:
+        return load_strict(path, max_bytes=64*1024*1024, max_depth=256)
+    except StrictJSONError as error:
+        raise Invalid(str(error)) from error
 
 if __name__=='__main__':
     import argparse
