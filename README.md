@@ -197,6 +197,21 @@ to the retained historical result files or the 99,999-obligation subledger.
 
 ## Repository map
 
+The producer reuses only exact integer unary-predicate bitmaps in a bounded
+128-entry cache. Each region still creates fresh equality/domain/minimum state,
+and each invocation still increments `SOLVE_CALLS`; the separately written set
+replayer is unchanged. No interval approximation or measured speedup is claimed.
+The optional portable regression below is also an explicit scientific-CI step:
+
+```sh
+python -B tests/regression_unary_bitmap.py -v
+```
+
+It checks all 131,072 mask/equal/truth combinations against literal byte sets,
+cache eviction, complete C001--C166 certificates and call counts, C167's cap,
+384 finite region instances, and the 18 mutation kinds. It does not rerun the
+historical POSIX campaign or change retained evidence.
+
 * `src/contextual.py`, `src/check_full_abstraction.py`: relation, witnesses, fixed
   basis, and finite audits.
 * `src/order_domain.py`, `src/branch_producer.py`: producer region solver and tree

@@ -32,6 +32,7 @@ jobs:
             python -B inspect_packet.py > "$EVIDENCE/packet.stdout" 2> "$EVIDENCE/packet.stderr"
             python -B -O inspect_packet.py > "$EVIDENCE/packet-optimized.stdout" 2> "$EVIDENCE/packet-optimized.stderr"
             python -B -m unittest discover -s tests -p "test_*.py" -v > "$EVIDENCE/tests.stdout" 2> "$EVIDENCE/tests.stderr"
+            python -B tests/regression_unary_bitmap.py -v > "$EVIDENCE/unary-bitmap.stdout" 2> "$EVIDENCE/unary-bitmap.stderr"
             python -B src/scientific_checks.py --output-dir "$EVIDENCE/campaign" > "$EVIDENCE/campaign.stdout" 2> "$EVIDENCE/campaign.stderr"
           ' 2>&1 | tee "$EVIDENCE/whole-run.log"
       - name: Retain raw outputs even on failure

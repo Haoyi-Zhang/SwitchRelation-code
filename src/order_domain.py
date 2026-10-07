@@ -7,6 +7,7 @@ The solver uses equality contraction, a DAG, and forward/backward bounds.
 from __future__ import annotations
 from collections import deque
 from dataclasses import dataclass
+from functools import lru_cache
 from typing import Any
 
 Atom = int | str
@@ -63,7 +64,7 @@ def solve(variables: list[str], constants: list[int], facts: list[list[Any]]) ->
     for f in facts:
         if f[0] == 'unary':
             r = roots[f[1]]
-            keep = sum(1 << x for x in range(256) if int((x & f[2]) == f[3]) == f[4])
+            keep = _unary_bitmap(f[2], f[3], f[4])
             allowed[r] &= keep
         elif f[0] == 'interval':
             r = roots[f[1]]
@@ -126,3 +127,20 @@ def mask_intervals(mask: int, equal: int) -> list[list[int]]:
             low, old = value, current
     ranges.append([low, 255])
     return ranges
+
+
+@lru_cache(maxsize=128, typed=True)
+def _cached_unary_bitmap(mask: int, equal: int, truth: int) -> int:
+    return _literal_unary_bitmap(mask, equal, truth)
+
+
+def _literal_unary_bitmap(mask, equal, truth):
+    return sum(1 << x for x in range(256) if int((x & mask) == equal) == truth)
+
+
+def _unary_bitmap(mask, equal, truth):
+    # Only exact integer predicates enter the bounded, immutable-value cache.
+    # Domain objects, equality roots, minima and feasibility are never cached.
+    if type(mask) is int and type(equal) is int and type(truth) is int:
+        return _cached_unary_bitmap(mask, equal, truth)
+    return _literal_unary_bitmap(mask, equal, truth)
