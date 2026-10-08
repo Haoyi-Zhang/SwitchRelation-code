@@ -49,8 +49,9 @@ For each equality class of origins, a region stores an allowed byte set and a
 lower/upper interval induced by order constraints.  Equalities contract
 vertices; strict comparisons produce directed edges.
 
-**Lemma 1 (origin support).**  Every byte read during execution is either a byte
-literal in the program or the value of one declared input origin.
+**Lemma 1 (origin support).**  Every byte read during execution is either the
+value of one declared input origin or a byte literal from initialization, the
+program, or an operation rule (including zero).
 
 **Proof.**  Initially the claim holds by the case grammar.  The only byte writes
 copy a previously read origin or write a literal.  String copy, concatenation,
