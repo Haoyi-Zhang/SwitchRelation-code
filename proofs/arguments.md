@@ -308,7 +308,5 @@ The completed argument does **not** prove:
 6. a defect in any external library or symbolic executor; or
 7. independent human review.
 
-The scientific result is a bounded semantic theorem plus a finite, independently
-structured producer/replayer artifact.  Any external submission would still need
-human authors to verify the work, accept accountability, and satisfy the venue's
-current authorship and AI-use policies.
+The scientific result comprises the bounded semantic theorem and the finite,
+separately structured producer/replayer implementations described above.
