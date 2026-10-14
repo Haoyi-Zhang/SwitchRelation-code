@@ -1,0 +1,61 @@
+{
+  "all_audit_program_executions": 49294,
+  "all_byte_signature_audit": {
+    "accounting_unit": "direct signature comparisons; not interpreter program executions",
+    "byte_values": 256,
+    "ordered_byte_pair_checks": 65536,
+    "signature_width_bits": 8,
+    "unequal_byte_pair_checks": 65280,
+    "unequal_byte_pairs_distinguished": 65280,
+    "unique_signatures": 256
+  },
+  "base_ordered_pair_checks": 1296,
+  "base_state_count": 36,
+  "byte_2_vs_3_sanity": {
+    "equality_to_0_observations_equal": true,
+    "equality_to_1_observations_equal": true,
+    "fixed_low_bit_probe_distinguishes": true,
+    "single_side_program_executions": 6
+  },
+  "directed_control_checks": 3,
+  "directed_controls": [
+    "capacity_mismatch",
+    "initialization_mismatch",
+    "quotiented_view_cache_uninitialized_payload"
+  ],
+  "fixed_basis": {
+    "capacity_bound_B": 2,
+    "formula": "1 + |R| + 8*B*|O|",
+    "instantiated_tests_per_pair": 18,
+    "object_names": [
+      "b"
+    ],
+    "pair_test_comparisons": 23382,
+    "persistent_scalar_names": [
+      "r"
+    ],
+    "single_side_program_executions": 46764,
+    "syntactic_templates": 3
+  },
+  "historical_result_reconciliation": {
+    "historical_222_scope": "37 related pairs times the former six-test 0/1 basis; pair-level comparisons, not single-side executions",
+    "historical_finite_basis_executions": 222,
+    "historical_pair_obligations": 1299,
+    "historical_unrelated_witness_context_checks_omitted_from_that_field": 1262
+  },
+  "pair_checks_total": 1299,
+  "related_pair_checks": 37,
+  "scope": "bounded executable audit; the quantified theorem is the paper proof",
+  "state_dependent_witnesses": {
+    "context_comparisons": 1262,
+    "lengths": {
+      "maximum": 2,
+      "one": 324,
+      "two": 290,
+      "zero": 648
+    },
+    "single_side_program_executions": 2524
+  },
+  "status": "pass",
+  "unrelated_pair_checks": 1262
+}

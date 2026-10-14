@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "cases_by_width": {
+    "0": 7,
+    "1": 52,
+    "2": 7
+  },
+  "assignments": 472071,
+  "leaf_minima_checked": 6281,
+  "single_side_executions": 2844988,
+  "regional_solver_obligations": 0,
+  "input_tree_sha256_before": "5db08904cad59caaccdf886b41c4791cfcff58622f68ac3034ec6a4e8b397f13",
+  "input_tree_sha256_after": "5db08904cad59caaccdf886b41c4791cfcff58622f68ac3034ec6a4e8b397f13",
+  "certificates": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\branch_handoffs\\branch-5\\completion-holds\\P086-windows-recheck\\certificates",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "wall_seconds": 10.43800000000192,
+  "process_cpu_seconds": 10.265625,
+  "wall_limit_seconds": 120,
+  "peak_rss_measured": false,
+  "scope": "Own bounded model; zero/one-origin cases and two-origin differing cases; no full-domain claim for the other multi-origin cases"
+}

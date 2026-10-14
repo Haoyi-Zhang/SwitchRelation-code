@@ -1,0 +1,6 @@
+{
+  "case": "C167",
+  "producer_region_calls": 6055,
+  "reason": "branch node budget",
+  "status": "unknown_resource_exhaustion"
+}

@@ -1,0 +1,19 @@
+{
+  "alphabet": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "brute_force_assignments": 10860,
+  "counted_solver_checker_obligations": 1152,
+  "pairwise_relation_checks": 5839,
+  "producer_solver_calls": 384,
+  "region_instances": 384,
+  "replayer_solver_calls": 384,
+  "satisfiable": 155,
+  "scope": "finite solver cross-check; not a proof of arbitrary Python execution",
+  "seed": 20261006,
+  "status": "pass",
+  "unsatisfiable": 229
+}

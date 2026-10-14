@@ -1,0 +1,66 @@
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C061", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C062", "least_input": [1], "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C063", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C064", "least_input": [0], "variables": 1}
+{"assignments": 65536, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C065", "least_input": [0, 128], "variables": 2}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C067", "least_input": [0], "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C068", "least_input": null, "variables": 1}
+{"assignments": 65536, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C069", "least_input": [1, 0], "variables": 2}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C070", "least_input": null, "variables": 1}
+{"assignments": 65536, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C071", "least_input": [1, 0], "variables": 2}
+{"assignments": 65536, "feasibility": {"candidate": "sat", "least_input": [0, 0], "reference": "sat", "verdict": "different_inputs"}, "id": "C073", "least_input": [0, 0], "variables": 2}
+{"assignments": 65536, "feasibility": {"candidate": "sat", "least_input": [1, 1], "reference": "sat", "verdict": "different_inputs"}, "id": "C074", "least_input": [1, 1], "variables": 2}
+{"assignments": 1, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C075", "least_input": null, "variables": 0}
+{"assignments": 1, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C076", "least_input": null, "variables": 0}
+{"assignments": 1, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C077", "least_input": null, "variables": 0}
+{"assignments": 1, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C078", "least_input": null, "variables": 0}
+{"assignments": 1, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C079", "least_input": null, "variables": 0}
+{"assignments": 1, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C080", "least_input": null, "variables": 0}
+{"assignments": 1, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C081", "least_input": null, "variables": 0}
+{"assignments": 256, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C082", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C083", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C084", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C085", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C086", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C087", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C088", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C089", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C090", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C091", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C092", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C093", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C094", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C095", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C096", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C097", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C098", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C099", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C100", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C101", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C102", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C103", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C104", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C105", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C106", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C107", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C108", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C109", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "unsat", "least_input": null, "reference": "unsat", "verdict": "same_inputs"}, "id": "C120", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C121", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C122", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C123", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C124", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C125", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C126", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C127", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C128", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C129", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C130", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C131", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C132", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C133", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "sat", "least_input": null, "reference": "sat", "verdict": "same_inputs"}, "id": "C134", "least_input": null, "variables": 1}
+{"assignments": 256, "feasibility": {"candidate": "unsat", "least_input": [1], "reference": "sat", "verdict": "different_inputs"}, "id": "C135", "least_input": [1], "variables": 1}
+{"assignments": 65536, "feasibility": {"candidate": "unsat", "least_input": [0, 0], "reference": "sat", "verdict": "different_inputs"}, "id": "C136", "least_input": [0, 0], "variables": 2}
+{"assignments": 65536, "feasibility": {"candidate": "unsat", "least_input": [0, 128], "reference": "sat", "verdict": "different_inputs"}, "id": "C137", "least_input": [0, 128], "variables": 2}
+{"assignments": 256, "feasibility": {"candidate": "unsat", "least_input": [1], "reference": "sat", "verdict": "different_inputs"}, "id": "C138", "least_input": [1], "variables": 1}

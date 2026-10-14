@@ -34,6 +34,7 @@ jobs:
             python -B -m unittest discover -s tests -p "test_*.py" -v > "$EVIDENCE/tests.stdout" 2> "$EVIDENCE/tests.stderr"
             python -B tests/regression_unary_bitmap.py -v > "$EVIDENCE/unary-bitmap.stdout" 2> "$EVIDENCE/unary-bitmap.stderr"
             python -B src/scientific_checks.py --output-dir "$EVIDENCE/campaign" > "$EVIDENCE/campaign.stdout" 2> "$EVIDENCE/campaign.stderr"
+            python -B src/direct_checks.py --certificates "$EVIDENCE/campaign/certificates" --output-dir "$EVIDENCE/direct" > "$EVIDENCE/direct.stdout" 2> "$EVIDENCE/direct.stderr"
           ' 2>&1 | tee "$EVIDENCE/whole-run.log"
       - name: Retain raw outputs even on failure
         if: always()

@@ -1,0 +1,20 @@
+{
+  "certificate_campaign": {
+    "certificates": 166,
+    "closed_branches": 1281,
+    "different": 16,
+    "leaves": 6281,
+    "mode": "fresh serialized-file reread, same process",
+    "nodes": 9986,
+    "producer_region_calls": 11267,
+    "replayer_region_calls": 11267,
+    "status": "pass"
+  },
+  "input_tree_sha256_after": "77f6e9ed0f7f6396850ba1960af2287b6e3791c73bb93eef70652b7ac51b5bb7",
+  "input_tree_sha256_before": "77f6e9ed0f7f6396850ba1960af2287b6e3791c73bb93eef70652b7ac51b5bb7",
+  "not_claimed": "historical reproduction, independent process replay, proof mechanization, external application results",
+  "primitive_oracle_run": false,
+  "process_cpu_seconds": 9.671875,
+  "status": "pass",
+  "wall_seconds": 9.9529999999977
+}

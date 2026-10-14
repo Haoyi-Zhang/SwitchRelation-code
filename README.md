@@ -139,7 +139,7 @@ Only like-for-like units are summed.  Historical frozen-ledger values are not
 imported into a new campaign.
 
 The accepted disposable-copy run used CPython 3.13.5 on Linux x86-64, one worker,
-a 2.5-GiB address-space limit, 110/115-second CPU limits, and a 118-second wall
+a 2500-MiB address-space limit, 110/115-second CPU limits, and a 118-second wall
 alarm.  The semantic code uses the Python standard library.  The tested
 prerequisite is CPython 3.11 or newer on a POSIX-like system with the resource
 interfaces used by the driver.
@@ -186,7 +186,7 @@ The flat artifact-repository workflow bounds the whole run on Ubuntu 24.04 and
 uploads raw outputs even after a failed gate.  Preparing that workflow is not
 evidence that a hosted run has occurred.
 
-The current CPython 3.12.14 Windows finite check reproduced 150 equivalent and
+The CPython 3.12.14 Windows finite check in `results/portable-campaign/` reproduced 150 equivalent and
 16 different certificates, 9,986 nodes, 6,281 leaves, and 1,281 closed answers.
 Its fresh seed 20261006 covered 384 regions and 10,860 finite assignments with
 no mismatch.  A separate direct audit exhausted the seven zero-origin cases,
@@ -194,6 +194,13 @@ no mismatch.  A separate direct audit exhausted the seven zero-origin cases,
 through the direct interpreter and both concrete producer backends, then checked
 all 6,281 fresh leaf minima.  These are new, overlapping finite checks, not edits
 to the retained historical result files or the 99,999-obligation subledger.
+The actual shared-loader campaign used 9.953 wall and 9.672 process-CPU seconds;
+the direct check used 10.438 wall and 10.266 process-CPU seconds. The raw
+summaries and per-case records accompany the commands. The direct route can be
+repeated against freshly checked certificates with `src/direct_checks.py`.
+The hosted workflow runs that route after its full certificate campaign;
+three portable regression methods reject disagreements from either concrete
+producer backend. These checks use the own bounded machine, not native C.
 
 ## Repository map
 

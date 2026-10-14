@@ -1,0 +1,11 @@
+{
+  "input_tree_sha256": "77f6e9ed0f7f6396850ba1960af2287b6e3791c73bb93eef70652b7ac51b5bb7",
+  "limits": {
+    "memory_limit_bytes": null,
+    "wall_seconds": 120,
+    "workers": 1
+  },
+  "platform": "Windows-11-10.0.28000-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "fresh finite checks, separate from historical host measurements"
+}
