@@ -48,6 +48,12 @@ sets, satisfiability, and the least disagreement.  The uncapped mathematical
 procedure terminates on the finite domain; configured limit exhaustion is
 `UNKNOWN`.
 
+The replayer traverses the complete certificate tree; it does not first strip
+top-level `switch` commands and accept by syntactic comparison.  In its list
+interpreter, `switch` itself is `pass` with no data effect because the view marker
+is quotiented out.  It still reconstructs every region and re-executes both
+programs, checking their outcomes at every leaf.
+
 ## Retained evidence and process modes
 
 The original completion batch generated C001--C166, checked each new certificate
@@ -57,6 +63,12 @@ and 11,267 producer plus 11,267 replayer regional calls.  A later audit loaded
 C001--C165 from files and replayed them in one audit process; a clean-extract audit
 loaded five selected certificates in one process.  These are not described as 166
 fresh-process replays.
+
+The 150 equivalent cases comprise 31 identical program pairs, 105 pairs differing
+only by `switch` commands, and 14 pairs with other program rewrites.  The first
+two groups exercise replay of unchanged computations and view changes; the 14
+remaining pairs exercise outcome-preserving rewrites beyond switch insertion.
+The 166 certificates and 6,281 leaves measure replay work, not distinct rewrites.
 
 The repaired isolated campaign serializes and re-reads all 166 newly generated
 certificates before replay in the campaign process.  C135 additionally receives an

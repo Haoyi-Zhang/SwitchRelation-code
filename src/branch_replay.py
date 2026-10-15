@@ -251,6 +251,8 @@ def execute(case, program, questions):
                     data.pop()
                 write(dst, target, data)
             elif opcode == 'switch':
+                # The quotiented view marker has no data effect in list semantics.
+                # check() still traverses the full tree; no top-level switch stripping.
                 pass
             elif opcode == 'erase_tail':
                 name = command['buf']
